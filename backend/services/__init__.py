@@ -1,1 +1,1 @@
-# Retail BDA Analytics Platform - Services Package
+# RetailPulse - Services Package

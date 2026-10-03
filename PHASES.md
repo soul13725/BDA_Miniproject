@@ -1,4 +1,4 @@
-# Retail BDA Analytics Platform — Phase Roadmap
+# RetailPulse — Real-Time Retail Big Data Analytics Platform — Phase Roadmap
 
 > Each phase builds on the previous one.  
 > Only **Phase 01** is currently implemented.
@@ -78,6 +78,23 @@ Establish the full-stack project scaffold:
 - Final documentation and academic report
 - Submission readiness validation
 - Final validation scripts
+
+## PHASE 08 — Presentation & Viva Packaging
+**Status:** ✅ COMPLETE
+- Optimize project for academic demonstration.
+
+## PHASE 09 & 10 — Real Infrastructure Audit & Live Ingestion
+**Status:** ✅ COMPLETE
+- Audit WSL/Hadoop/Hive infrastructure availability.
+- Introduce live transaction generation and streaming APIs.
+
+## PHASE 11 — Live-First Dataset & Real-Time Analytics
+**Status:** ✅ COMPLETE
+- Convert architecture to Live-First ingestion.
+- Store real-time events in `data/live/retail_live_transactions.csv`.
+- Create live analytical endpoints.
+- Update React Dashboard to track real-time analytics by default.
+- Retain historical data for baseline comparison.
 
 ---
 *(End of Roadmap)*

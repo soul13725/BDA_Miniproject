@@ -22,6 +22,9 @@ frontend/.vite/
 # ── Output / Generated Data ───────────────────────
 # output/ (Keep output directory for academic submission)
 
+# ── Live Data ─────────────────────────────────────
+data/live/*.csv
+
 # ── IDE / Editor ──────────────────────────────────
 .vscode/
 .idea/

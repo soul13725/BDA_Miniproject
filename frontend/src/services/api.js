@@ -75,4 +75,65 @@ export const getTopProducts = async () => {
   return response.data;
 };
 
+// Live API Endpoints
+export const getLiveStatus = async () => {
+  const response = await apiClient.get('/api/live/status');
+  return response.data;
+};
+
+export const startLiveStream = async () => {
+  const response = await apiClient.post('/api/live/start');
+  return response.data;
+};
+
+export const stopLiveStream = async () => {
+  const response = await apiClient.post('/api/live/stop');
+  return response.data;
+};
+
+export const getLiveSummary = async () => {
+  const response = await apiClient.get('/api/live/summary');
+  return response.data;
+};
+
+export const getLiveTransactions = async (limit = 100) => {
+  const response = await apiClient.get(`/api/live/transactions?limit=${limit}`);
+  return response.data;
+};
+
+export const getLiveCategories = async () => {
+  const response = await apiClient.get('/api/live/categories');
+  return response.data;
+};
+
+export const getLivePayments = async () => {
+  const response = await apiClient.get('/api/live/payments');
+  return response.data;
+};
+
+export const getLiveCities = async () => {
+  const response = await apiClient.get('/api/live/cities');
+  return response.data;
+};
+
+export const getLiveChannels = async () => {
+  const response = await apiClient.get('/api/live/channels');
+  return response.data;
+};
+
+export const getLiveRevenueTrend = async () => {
+  const response = await apiClient.get('/api/live/revenue-trend');
+  return response.data;
+};
+
+export const getLiveProducts = async () => {
+  const response = await apiClient.get('/api/live/products');
+  return response.data;
+};
+
+export const resetLiveStream = async () => {
+  const response = await apiClient.post('/api/live/reset');
+  return response.data;
+};
+
 export default apiClient;

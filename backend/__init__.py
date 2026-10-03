@@ -1,1 +1,1 @@
-# Retail BDA Analytics Platform - Backend Package
+# RetailPulse - Backend Package

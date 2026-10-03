@@ -31,8 +31,8 @@ function Sidebar() {
       <div style={styles.logo}>
         <span style={styles.logoIcon}>📊</span>
         <div>
-          <div style={styles.logoTitle}>Retail BDA</div>
-          <div style={styles.logoSub}>Analytics Platform</div>
+          <div style={styles.logoTitle}>RetailPulse</div>
+          <div style={styles.logoSub}>Real-Time Retail Analytics</div>
         </div>
       </div>
 
@@ -51,9 +51,6 @@ function Sidebar() {
           >
             <span style={styles.navIcon}>{icon}</span>
             <span>{label}</span>
-            {path !== '/' && (
-              <span style={styles.navBadge}>Soon</span>
-            )}
           </NavLink>
         ))}
       </nav>
@@ -88,6 +85,10 @@ function PlaceholderPage({ title }) {
 }
 
 /* ── Root App ── */
+import Products from './pages/Products.jsx';
+import Transactions from './pages/Transactions.jsx';
+import BDAPipeline from './pages/BDAPipeline.jsx';
+
 export default function App() {
   return (
     <div style={styles.layout}>
@@ -95,9 +96,9 @@ export default function App() {
       <main style={styles.main}>
         <Routes>
           <Route path="/"             element={<Dashboard />} />
-          <Route path="/products"     element={<PlaceholderPage title="Products Analytics" />} />
-          <Route path="/transactions" element={<PlaceholderPage title="Transactions Analytics" />} />
-          <Route path="/pipeline"     element={<PlaceholderPage title="BDA Pipeline" />} />
+          <Route path="/products"     element={<Products />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/pipeline"     element={<BDAPipeline />} />
         </Routes>
       </main>
     </div>

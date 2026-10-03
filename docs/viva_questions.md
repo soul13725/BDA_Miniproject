@@ -71,8 +71,29 @@ Hive requires a running Hadoop cluster and HDFS instance, which are not installe
 **23. Is the project still valid without Hadoop/Hive execution?**
 Yes. The project demonstrates the full logical architecture, pipeline flow, and integration of the Big Data stack. The local fallback ensures the end-to-end data flow (Raw Data -> Processed -> API -> UI) works, while preserving the exact HQL/Mapper scripts required for cluster execution.
 
-**24. What are the limitations?**
+**24. What is RetailPulse?**
+RetailPulse is a real-time retail Big Data analytics platform that bridges high-velocity live event ingestion with a historical batch processing fallback architecture.
+
+**25. What is the data source?**
+The primary data source is a live simulated transaction generator that emits retail events continuously. A secondary, historical dataset (5,000 records) is retained for batch MapReduce/Hive demonstrations.
+
+**26. What is the difference between live and historical data?**
+Live data is generated and ingested in real-time, simulating an active retail environment. It is stored in `retail_live_transactions.csv` and processed immediately by in-memory aggregators. Historical data is static (`retail_logs.csv`), representing past transactions intended for batch MapReduce analysis.
+
+**27. How does live ingestion work?**
+A background Python thread acts as the data generator, simulating transaction events every few seconds. These events are captured by a centralized `live_data_service` that concurrently appends them to a CSV file and updates in-memory KPI dictionaries in a thread-safe manner using locks.
+
+**28. How does the dashboard update?**
+The React frontend implements a polling mechanism (e.g., every 3 seconds) using `setInterval`. It repeatedly fetches the latest JSON summaries from FastAPI and triggers re-renders of the Recharts components to reflect the new data.
+
+**29. How are duplicate transaction IDs prevented?**
+During live ingestion, transaction IDs are generated using UUIDs. The validation scripts enforce uniqueness by parsing the dataset and ensuring no two rows share the same ID using a Python `set`.
+
+**30. How is data validated?**
+Validation scripts (`validate_data.py`, `validate_live_data.py`) check the CSV files for schema integrity, column counts, missing values, deterministic mathematical correctness (e.g., checking if quantity * price == total_amount), and uniqueness constraints.
+
+**31. What are the limitations?**
 The primary limitation is scale. The current local fallback engine processes data in memory using single-threaded Python scripts, meaning it cannot process terabytes of data like a true Hadoop cluster could.
 
-**25. What are possible future improvements?**
+**32. What are possible future improvements?**
 Deploying the project to AWS EMR or a Dockerized Hadoop cluster, integrating real-time streaming via Apache Kafka, and utilizing Spark for faster, in-memory processing.

@@ -3,12 +3,12 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    """Centralized configuration for Retail BDA Analytics Platform."""
+    """Centralized configuration for RetailPulse."""
 
     # Application metadata
-    app_name: str = "Retail BDA Analytics Platform"
+    app_name: str = "RetailPulse"
     app_version: str = "0.1.0"
-    phase: str = "Phase 06"
+    phase: str = "Phase 12"
 
     # Pipeline mode: "local" (default) | "hadoop" | "hive"
     # "local" uses Python/Pandas as fallback when Hadoop/Hive are unavailable

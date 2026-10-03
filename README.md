@@ -1,13 +1,15 @@
-# Retail BDA Analytics Platform
+# RetailPulse
+
+## Real-Time Retail Big Data Analytics Platform
 
 > A modular Big Data Analytics platform for retail, built as an academic project.  
-> **Current Phase:** Phase 07 — Final Integration & Testing (STABLE)
+> **Current Phase:** Phase 12 — Branding & Polish
 
 ---
 
 ## 1. Project Overview
 
-Retail BDA Analytics Platform is a Big Data Analytics application that processes simulated retail transaction data using Hadoop-compatible MapReduce concepts and HiveQL analytics. The processed results are exposed through a FastAPI backend and visualized through an interactive React dashboard.
+RetailPulse is a real-time retail Big Data analytics platform that ingests a continuously generated simulated retail transaction stream, performs live analytics, exposes analytics through FastAPI, and visualizes insights through an interactive React dashboard.
 
 Because the current development environment does not have Hadoop, HDFS, or Hive installed, the system provides a validated local fallback execution path. The project retains HDFS and Hive integration artifacts so the same analytical architecture can be executed on a Hadoop/Hive environment later.
 
@@ -37,19 +39,20 @@ Retail businesses generate massive amounts of transactional data. Analyzing this
 ```
                  RETAIL BDA ANALYTICS PLATFORM
 
-                     retail_logs.csv
+               Live Simulated Retail Transaction Stream
                            │
                            ▼
-                  HDFS / Local Storage
+             Live Dataset (retail_live_transactions.csv)
                            │
+                           ▼
             ┌──────────────┴──────────────┐
             │                             │
             ▼                             ▼
-       MapReduce                    Hive / HiveQL
+       MapReduce/HDFS               Hive / HiveQL  (Future)
             │                             │
             └──────────────┬──────────────┘
                            ▼
-                 Local Fallback Analytics
+                 Live Analytics Engine
                            │
                            ▼
                        FastAPI
@@ -59,11 +62,13 @@ Retail businesses generate massive amounts of transactional data. Analyzing this
                            │
                            ▼
                  Interactive Dashboard
+
+* Note: Historical dataset (retail_logs.csv) is retained for baseline comparison.
 ```
 
 ## 6. Dataset
 
-The project relies on a 5,000-record CSV file (`data/retail_logs.csv`) containing simulated retail transactions. It includes 13 columns such as `transaction_id`, `product_name`, `category`, `quantity`, `unit_price`, `payment_method`, and `city`. The dataset generation is deterministic (using random seed 42) to ensure consistent metrics across tests.
+The project relies on a continuously generated live transaction stream (`data/live/retail_live_transactions.csv`) for real-time analytics. The platform also maintains a historical 5,000-record CSV file (`data/retail_logs.csv`) containing simulated retail transactions for baseline validation and comparison.
 
 ## 7. Hadoop/HDFS
 
@@ -112,23 +117,20 @@ cd frontend
 npm install
 ```
 
-## 14. Running the Project
+## 14. Quick Demo Workflow
 
-Open two terminals.
+1. Start FastAPI (`python -m uvicorn main:app --port 8000`)
+2. Start React (`npm run dev`)
+3. Open RetailPulse in browser
+4. Click "Start" in the Live Data Control section
+5. Observe live KPIs updating in real-time
+6. Observe charts reacting to new data
+7. Open Products page to see live analytics per product
+8. Open Transactions page to see the raw event stream
+9. Open BDA Pipeline page to review architecture
+10. Explain HDFS/Hive fallback for historical processing
 
-**Terminal 1 — Backend:**
-```powershell
-cd backend
-python -m uvicorn main:app --host 127.0.0.1 --port 8000
-```
-
-**Terminal 2 — Frontend:**
-```powershell
-cd frontend
-npm run dev
-```
-
-Navigate to `http://localhost:5173/` in your browser.
+> **Note:** RetailPulse currently uses a simulated live retail transaction stream. The historical dataset is retained for MapReduce/Hive/BDA demonstration and regression testing.
 
 ## 15. Validation Commands
 

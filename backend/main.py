@@ -6,12 +6,14 @@ from config import settings
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
-    description="Retail Big Data Analytics Platform — Phase 06 Dashboard",
+    description="Real-Time Retail Big Data Analytics Platform",
 )
 
 from api.analytics import router as analytics_router
-app.include_router(analytics_router)
+from api.live import router as live_router
 
+app.include_router(analytics_router)
+app.include_router(live_router)
 # ---------------------------------------------------------------------------
 # CORS
 # ---------------------------------------------------------------------------
