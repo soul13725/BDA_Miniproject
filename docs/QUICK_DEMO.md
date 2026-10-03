@@ -4,7 +4,7 @@
 RetailPulse is a real-time retail Big Data analytics platform that ingests live simulated transactions and provides instantaneous analytical insights through an interactive dashboard.
 
 2. Architecture
-The system consists of a live Python transaction generator, a FastAPI backend serving real-time KPIs, and a React + Vite dashboard displaying interactive Recharts. A historical dataset and MapReduce/Hive fallback path are preserved for batch analytical regression testing.
+The system relies on a Canonical Data Catalog (JSON) to feed a live Python transaction generator and historical generator. A FastAPI backend serves real-time KPIs and dynamic product catalog searches, and a React + Vite dashboard displays interactive Recharts. A historical dataset and MapReduce/Hive fallback path are preserved for batch analytical regression testing.
 
 3. Start Backend
 Run `python -m uvicorn main:app --port 8000` from the `backend/` directory to start the FastAPI server.

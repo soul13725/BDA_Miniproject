@@ -18,7 +18,14 @@ import {
   getDailyRevenue,
   getMonthlyRevenue, 
   getTopProducts,
-  getLiveSummary
+  getPayments,
+  getLiveSummary,
+  getLiveCategories,
+  getLivePayments,
+  getLiveCities,
+  getLiveChannels,
+  getLiveRevenueTrend,
+  getLiveProducts
 } from '../services/api';
 
 const formatCurrency = (val) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(val || 0);
@@ -35,9 +42,12 @@ export default function Dashboard() {
   const [categories, setCategories] = useState([]);
   const [payments, setPayments] = useState([]);
   const [cities, setCities] = useState([]);
+  const [channels, setChannels] = useState([]);
+  const [topProducts, setTopProducts] = useState([]);
   const [dataSource, setDataSource] = useState('LIVE'); // 'LIVE' or 'HISTORICAL'
   
   // Live chart data
+  const [liveSummary, setLiveSummary] = useState(null);
   const [liveCategories, setLiveCategories] = useState([]);
   const [livePayments, setLivePayments] = useState([]);
   const [liveCities, setLiveCities] = useState([]);

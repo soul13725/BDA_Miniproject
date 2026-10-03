@@ -1,5 +1,6 @@
 import csv
 import sys
+import json
 from pathlib import Path
 from datetime import datetime
 
@@ -9,9 +10,7 @@ REQUIRED_COLUMNS = [
     "payment_method", "city", "channel"
 ]
 
-VALID_CATEGORIES = {"Electronics", "Stationery", "Fashion", "Home"}
 VALID_PAYMENTS = {"UPI", "Card", "Cash", "Wallet"}
-VALID_CITIES = {"Mumbai", "Pune", "Delhi", "Bengaluru", "Hyderabad", "Chennai"}
 VALID_CHANNELS = {"Online", "Store"}
 
 def validate_data(file_path):
@@ -20,11 +19,30 @@ def validate_data(file_path):
     print("========================================")
     print(f"File:\n{file_path}\n")
     
+    catalog_dir = Path("data/catalog")
+    with open(catalog_dir / "categories.json", "r", encoding="utf-8") as f:
+        catalog_cats = json.load(f)
+    with open(catalog_dir / "cities.json", "r", encoding="utf-8") as f:
+        catalog_cities = json.load(f)
+    with open(catalog_dir / "products.json", "r", encoding="utf-8") as f:
+        catalog_prods = json.load(f)
+        
+    VALID_CATEGORIES = set(c["category_name"] for c in catalog_cats)
+    VALID_CITIES = set(c["city_name"] for c in catalog_cities)
+    
+    # Validate catalog size
+    if len(VALID_CATEGORIES) < 50:
+        print(f"Validation failed: category count {len(VALID_CATEGORIES)} < 50")
+        return False
+    if len(catalog_prods) < 500:
+        print(f"Validation failed: product count {len(catalog_prods)} < 500")
+        return False
+    if len(VALID_CITIES) < 50:
+        print(f"Validation failed: city count {len(VALID_CITIES)} < 50")
+        return False
+
     if not file_path.exists():
         print("File exists:\nFAIL")
-        print("========================================")
-        print("VALIDATION RESULT: FAIL")
-        print("========================================")
         return False
         
     try:
@@ -34,9 +52,6 @@ def validate_data(file_path):
             rows = list(reader)
     except Exception as e:
         print(f"CSV loading:\nFAIL ({str(e)})")
-        print("========================================")
-        print("VALIDATION RESULT: FAIL")
-        print("========================================")
         return False
         
     num_rows = len(rows)
@@ -58,9 +73,6 @@ def validate_data(file_path):
     print(f"Schema:\n{'PASS' if schema_pass else 'FAIL'}\n")
     
     if not schema_pass:
-        print("========================================")
-        print("VALIDATION RESULT: FAIL")
-        print("========================================")
         return False
         
     txn_ids = set()
@@ -78,7 +90,6 @@ def validate_data(file_path):
     
     invalid_examples = {}
     
-    # Stats
     unique_customers = set()
     unique_products = set()
     total_revenue = 0.0
@@ -93,7 +104,6 @@ def validate_data(file_path):
     max_date = None
     
     for idx, row in enumerate(rows):
-        # null check
         if len(row) != 13 or any(val is None or val.strip() == '' for val in row):
             null_pass = False
             
@@ -113,13 +123,11 @@ def validate_data(file_path):
         city = row[11]
         channel = row[12]
         
-        # Transaction ID
         if txn_id in txn_ids:
             txn_id_pass = False
             invalid_examples['Duplicate TXN'] = txn_id
         txn_ids.add(txn_id)
         
-        # Quantity
         try:
             qty = int(qty_str)
             if qty <= 0:
@@ -129,7 +137,6 @@ def validate_data(file_path):
             quantity_pass = False
             invalid_examples['Quantity format'] = qty_str
             
-        # Price
         try:
             price = float(price_str)
             if price <= 0:
@@ -139,7 +146,6 @@ def validate_data(file_path):
             price_pass = False
             invalid_examples['Price format'] = price_str
             
-        # Discount
         try:
             disc = float(disc_str)
             if disc < 0 or disc > 100:
@@ -149,7 +155,6 @@ def validate_data(file_path):
             discount_pass = False
             invalid_examples['Discount format'] = disc_str
             
-        # Total Amount
         try:
             amount = float(amount_str)
             if amount < 0:
@@ -167,7 +172,6 @@ def validate_data(file_path):
             amount_pass = False
             invalid_examples['Amount format'] = amount_str
             
-        # Enum checks
         if cat not in VALID_CATEGORIES:
             category_pass = False
             invalid_examples['Category'] = cat
@@ -181,7 +185,6 @@ def validate_data(file_path):
             channel_pass = False
             invalid_examples['Channel'] = channel
             
-        # Timestamp
         try:
             dt = datetime.strptime(ts_str, "%Y-%m-%d %H:%M:%S")
             if min_date is None or dt < min_date:
@@ -192,7 +195,6 @@ def validate_data(file_path):
             timestamp_pass = False
             invalid_examples['Timestamp format'] = ts_str
             
-        # Gather stats
         if 'amount' in locals():
             total_revenue += amount
             if min_val is None or amount < min_val:
@@ -237,25 +239,7 @@ def validate_data(file_path):
     print(f"Total revenue: {total_revenue:.2f}")
     if num_rows > 0:
         print(f"Average transaction value: {(total_revenue / num_rows):.2f}")
-    print(f"Minimum transaction value: {min_val:.2f}" if min_val is not None else "Minimum transaction value: N/A")
-    print(f"Maximum transaction value: {max_val:.2f}" if max_val is not None else "Maximum transaction value: N/A")
-    print(f"Total quantity sold: {total_quantity}")
     
-    print("\nCategory counts:")
-    for k, v in category_counts.items(): print(f"  {k}: {v}")
-    
-    print("\nPayment method counts:")
-    for k, v in payment_counts.items(): print(f"  {k}: {v}")
-        
-    print("\nCity counts:")
-    for k, v in city_counts.items(): print(f"  {k}: {v}")
-        
-    print("\nChannel counts:")
-    for k, v in channel_counts.items(): print(f"  {k}: {v}")
-        
-    if min_date and max_date:
-        print(f"\nDate range: {min_date.strftime('%Y-%m-%d')} to {max_date.strftime('%Y-%m-%d')}")
-        
     all_pass = all([
         schema_pass, txn_id_pass, null_pass, quantity_pass, price_pass,
         discount_pass, amount_pass, category_pass, payment_pass, city_pass,

@@ -48,9 +48,25 @@ def reset_stream():
 def get_summary():
     return live_data_service.get_summary()
 
+from typing import Optional
+
 @router.get("/transactions")
-def get_transactions(limit: int = 100):
-    return live_data_service.get_transactions(limit=limit)
+def get_transactions(
+    limit: int = 100,
+    search: Optional[str] = None,
+    category: Optional[str] = None,
+    city: Optional[str] = None,
+    payment_method: Optional[str] = None,
+    channel: Optional[str] = None
+):
+    return live_data_service.get_transactions(
+        limit=limit,
+        search=search,
+        category=category,
+        city=city,
+        payment_method=payment_method,
+        channel=channel
+    )
 
 @router.post("/transactions")
 def ingest_transaction(event: TransactionEvent):

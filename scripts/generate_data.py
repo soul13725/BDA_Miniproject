@@ -1,40 +1,35 @@
 import argparse
 import csv
 import random
+import json
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# Set up constraints and mappings
-PRODUCTS = [
-    ("P001", "Wireless Mouse", "Electronics", 599.00),
-    ("P002", "Mechanical Keyboard", "Electronics", 3500.00),
-    ("P003", "USB-C Cable", "Electronics", 299.00),
-    ("P004", "Notebook", "Stationery", 150.00),
-    ("P005", "Ball Pen Pack", "Stationery", 100.00),
-    ("P006", "Backpack", "Fashion", 1200.00),
-    ("P007", "Running Shoes", "Fashion", 2500.00),
-    ("P008", "Coffee Mug", "Home", 250.00),
-    ("P009", "Water Bottle", "Home", 450.00),
-    ("P010", "Desk Lamp", "Home", 850.00),
-    ("P011", "Smart Watch", "Electronics", 4999.00),
-    ("P012", "Power Bank", "Electronics", 1500.00)
-]
-
 PAYMENT_METHODS = ["UPI", "Card", "Cash", "Wallet"]
-CITIES = ["Mumbai", "Pune", "Delhi", "Bengaluru", "Hyderabad", "Chennai"]
 CHANNELS = ["Online", "Store"]
 DISCOUNTS = [0, 5, 10, 15, 20, 25]
 
 def generate_data(num_records, output_path):
     random.seed(42)
     
+    # Load catalog
+    catalog_dir = Path("data/catalog")
+    with open(catalog_dir / "products.json", "r", encoding="utf-8") as f:
+        products = json.load(f)
+    with open(catalog_dir / "cities.json", "r", encoding="utf-8") as f:
+        cities = json.load(f)
+
     start_date = datetime(2025, 1, 1)
     end_date = datetime(2025, 12, 31, 23, 59, 59)
     time_diff = end_date - start_date
     
-    # Pre-generate some customers
     num_customers = max(10, num_records // 10)
     customer_ids = [f"CUST{str(i).zfill(4)}" for i in range(1, num_customers + 1)]
+    
+    # Pre-calculate weighted choices
+    product_weights = [p.get("demand_weight", 1) for p in products]
+    city_weights = [c.get("demand_weight", 1) for c in cities]
+    city_names = [c["city_name"] for c in cities]
     
     records = []
     
@@ -49,7 +44,6 @@ def generate_data(num_records, output_path):
     for i in range(1, num_records + 1):
         txn_id = f"TXN{str(i).zfill(6)}"
         
-        # Random timestamp
         random_seconds = random.randint(0, int(time_diff.total_seconds()))
         txn_date = start_date + timedelta(seconds=random_seconds)
         
@@ -61,29 +55,28 @@ def generate_data(num_records, output_path):
         timestamp_str = txn_date.strftime("%Y-%m-%d %H:%M:%S")
         
         customer_id = random.choice(customer_ids)
-        product = random.choice(PRODUCTS)
-        product_id, product_name, category, unit_price = product
+        product = random.choices(products, weights=product_weights, k=1)[0]
         
         quantity = random.randint(1, 5)
         discount_percent = random.choice(DISCOUNTS)
         
-        gross_amount = quantity * unit_price
+        gross_amount = quantity * product["unit_price"]
         discount_amount = gross_amount * (discount_percent / 100.0)
         total_amount = round(gross_amount - discount_amount, 2)
         
         payment_method = random.choice(PAYMENT_METHODS)
-        city = random.choice(CITIES)
+        city = random.choices(city_names, weights=city_weights, k=1)[0]
         channel = random.choice(CHANNELS)
         
         records.append([
-            txn_id, timestamp_str, customer_id, product_id, product_name, category, 
-            quantity, unit_price, discount_percent, total_amount, payment_method, city, channel
+            txn_id, timestamp_str, customer_id, product["product_id"], product["product_name"], product["category"], 
+            quantity, product["unit_price"], discount_percent, total_amount, payment_method, city, channel
         ])
         
         total_revenue += total_amount
         unique_customers.add(customer_id)
-        unique_products.add(product_id)
-        categories.add(category)
+        unique_products.add(product["product_id"])
+        categories.add(product["category"])
         
     output_path.parent.mkdir(parents=True, exist_ok=True)
     

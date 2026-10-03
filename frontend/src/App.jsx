@@ -2,6 +2,12 @@ import { useState, useEffect } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 import { fetchHealth } from './services/api.js';
 
+import Dashboard from './pages/Dashboard.jsx';
+import Products from './pages/Products.jsx';
+import Transactions from './pages/Transactions.jsx';
+import BDAPipeline from './pages/BDAPipeline.jsx';
+
+
 /* ============================================================
    App — Phase 01 Shell
    ============================================================ */
@@ -63,8 +69,6 @@ function Sidebar() {
   );
 }
 
-import Dashboard from './pages/Dashboard.jsx';
-
 /* ── App Shell ── */
 
 
@@ -85,10 +89,6 @@ function PlaceholderPage({ title }) {
 }
 
 /* ── Root App ── */
-import Products from './pages/Products.jsx';
-import Transactions from './pages/Transactions.jsx';
-import BDAPipeline from './pages/BDAPipeline.jsx';
-
 export default function App() {
   return (
     <div style={styles.layout}>

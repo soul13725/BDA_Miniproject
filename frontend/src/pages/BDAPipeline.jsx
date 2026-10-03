@@ -11,19 +11,23 @@ export default function BDAPipeline() {
   }, []);
 
   const liveComponents = [
-    { name: "LIVE RETAIL DATA GENERATOR", status: liveStatus?.is_running ? 'ONLINE' : 'OFFLINE', active: !!liveStatus?.is_running },
-    { name: "LIVE DATASET\nretail_live_transactions.csv", status: "ONLINE", active: true },
-    { name: "LIVE ANALYTICS", status: "ONLINE", active: true },
-    { name: "FASTAPI", status: analyticsStatus ? 'ONLINE' : 'OFFLINE', active: !!analyticsStatus },
-    { name: "REACT DASHBOARD", status: "ONLINE", active: true }
+    { name: "CANONICAL CATALOG\ndata/catalog/", status: "ONLINE", active: true },
+    { name: "LIVE GENERATOR\nretail_live_transactions", status: liveStatus?.is_running ? 'ONLINE' : 'OFFLINE', active: !!liveStatus?.is_running },
+    { name: "LIVE CSV\ndata/live/retail_live_transactions.csv", status: "ONLINE", active: true },
+    { name: "LIVE ANALYTICS\nIn-Memory Aggregation", status: "ONLINE", active: true },
+    { name: "FASTAPI\nBackend Analytics API", status: analyticsStatus ? 'ONLINE' : 'OFFLINE', active: !!analyticsStatus },
+    { name: "REACT DASHBOARD\nRetailPulse UI", status: "ONLINE", active: true }
   ];
 
   const histComponents = [
-    { name: "LIVE / HISTORICAL DATA", status: "ONLINE", active: true },
-    { name: "HDFS", status: analyticsStatus?.hdfs_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hdfs_available },
-    { name: "MapReduce", status: analyticsStatus?.hdfs_available ? 'ONLINE' : 'ONLINE (Simulated)', active: true },
-    { name: "Hive", status: analyticsStatus?.hive_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hive_available },
-    { name: "Analytics", status: !analyticsStatus?.hive_available ? 'ONLINE (Fallback)' : 'ONLINE', active: true }
+    { name: "HISTORICAL CSV\ndata/retail_logs.csv", status: "ONLINE", active: true },
+    { name: "HDFS\n/retail_bda/raw", status: analyticsStatus?.hdfs_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hdfs_available },
+    { name: "MapReduce\nPython Mapper/Reducer", status: analyticsStatus?.hdfs_available ? 'REAL HADOOP' : 'LOCAL SIMULATION', active: true },
+    { name: "MapReduce Output\noutput/mapreduce", status: "ONLINE", active: true },
+    { name: "Hive\nApache Hive Data Warehouse", status: analyticsStatus?.hive_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hive_available },
+    { name: "HiveQL / Analytics\noutput/hive", status: !analyticsStatus?.hive_available ? 'LOCAL FALLBACK' : 'ONLINE', active: true },
+    { name: "FASTAPI\nBackend Analytics API", status: analyticsStatus ? 'ONLINE' : 'OFFLINE', active: !!analyticsStatus },
+    { name: "REACT DASHBOARD\nRetailPulse UI", status: "ONLINE", active: true }
   ];
 
   const PipelineFlow = ({ components, fallbackMessage }) => (

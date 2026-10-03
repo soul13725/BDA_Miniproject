@@ -11,9 +11,11 @@ app = FastAPI(
 
 from api.analytics import router as analytics_router
 from api.live import router as live_router
+from api.catalog import router as catalog_router
 
 app.include_router(analytics_router)
 app.include_router(live_router)
+app.include_router(catalog_router)
 # ---------------------------------------------------------------------------
 # CORS
 # ---------------------------------------------------------------------------

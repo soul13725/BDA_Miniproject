@@ -1,9 +1,20 @@
 import sys
+import json
 from pathlib import Path
 from decimal import Decimal
 
 def validate():
     output_dir = Path("output/mapreduce")
+    catalog_dir = Path("data/catalog")
+    
+    with open(catalog_dir / "categories.json", "r", encoding="utf-8") as f:
+        catalog_cats = json.load(f)
+    with open(catalog_dir / "products.json", "r", encoding="utf-8") as f:
+        catalog_prods = json.load(f)
+        
+    VALID_CATEGORIES = set(c["category_name"] for c in catalog_cats)
+    VALID_PRODS = set(p["product_id"] for p in catalog_prods)
+    
     
     total_file = output_dir / "total_revenue.txt"
     cat_file = output_dir / "category_revenue.tsv"
@@ -81,15 +92,13 @@ def validate():
     print(f"Category sum matches total: {'PASS' if cat_match else 'FAIL'} (diff: {cat_diff})")
     print(f"Product sum matches total: {'PASS' if prod_match else 'FAIL'} (diff: {prod_diff})")
     
-    expected_cats = {"Electronics", "Stationery", "Fashion", "Home"}
-    cats_exist = expected_cats.issubset(cat_names)
-    print(f"Expected categories: {'PASS' if cats_exist else 'FAIL'} (found: {cat_names})")
+    cats_valid = cat_names.issubset(VALID_CATEGORIES)
+    print(f"Categories valid: {'PASS' if cats_valid else 'FAIL'} (found: {len(cat_names)})")
     
-    expected_prods = {"P001", "P002", "P003", "P004", "P005", "P006", "P007", "P008", "P009", "P010", "P011", "P012"}
-    prods_exist = expected_prods.issubset(prod_ids)
-    print(f"Expected products: {'PASS' if prods_exist else 'FAIL'}")
+    prods_valid = prod_ids.issubset(VALID_PRODS)
+    print(f"Products valid: {'PASS' if prods_valid else 'FAIL'}")
     
-    all_pass = files_exist and cat_valid and prod_valid and not dup_cats and not dup_prods and cat_match and prod_match and cats_exist and prods_exist
+    all_pass = files_exist and cat_valid and prod_valid and not dup_cats and not dup_prods and cat_match and prod_match and cats_valid and prods_valid
     return all_pass
 
 if __name__ == "__main__":

@@ -1,43 +1,59 @@
 import time
 import random
 import threading
+import json
 from datetime import datetime
+from pathlib import Path
 from services.live_data_service import live_data_service
 
+# Load catalog globally
+catalog_dir = Path("../data/catalog")
+# For the backend, the CWD is usually `e:\CODING\BDA PROJECT\backend`
+# so the path to catalog is `../data/catalog`
+catalog_dir = Path("..") / "data" / "catalog"
+if not catalog_dir.exists():
+    catalog_dir = Path("data/catalog") # Fallback if run from root
+
+products = []
+cities = []
+
+try:
+    with open(catalog_dir / "products.json", "r", encoding="utf-8") as f:
+        products = json.load(f)
+    with open(catalog_dir / "cities.json", "r", encoding="utf-8") as f:
+        cities = json.load(f)
+except Exception as e:
+    print(f"Error loading catalog for live generator: {e}")
+
+product_weights = [p.get("demand_weight", 1) for p in products] if products else []
+city_weights = [c.get("demand_weight", 1) for c in cities] if cities else []
+city_names = [c["city_name"] for c in cities] if cities else []
+
 def transaction_generator_thread():
-    categories = ["Electronics", "Fashion", "Home", "Stationery"]
-    products = [
-        {"id": "P001", "name": "Wireless Mouse", "category": "Electronics", "price": 599.00},
-        {"id": "P005", "name": "Smartphone", "category": "Electronics", "price": 24995.00},
-        {"id": "P008", "name": "T-Shirt", "category": "Fashion", "price": 799.00},
-        {"id": "P011", "name": "Chair", "category": "Home", "price": 4500.00},
-        {"id": "P002", "name": "Notebook", "category": "Stationery", "price": 150.00}
-    ]
-    cities = ["Mumbai", "Delhi", "Bengaluru", "Pune", "Hyderabad", "Chennai"]
     payments = ["Card", "UPI", "Wallet", "Cash"]
     channels = ["Online", "Store"]
 
     while True:
-        if live_data_service.is_running:
+        if live_data_service.is_running and products and cities:
             try:
-                prod = random.choice(products)
+                prod = random.choices(products, weights=product_weights, k=1)[0]
                 qty = random.randint(1, 5)
                 discount = random.choice([0, 5, 10])
-                total = round((prod["price"] * qty) * (1 - discount/100), 2)
+                total = round((prod["unit_price"] * qty) * (1 - discount/100), 2)
                 
                 txn = {
                     "transaction_id": f"LVTXN{int(time.time() * 1000)}{random.randint(10,99)}",
                     "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                     "customer_id": f"CUST{random.randint(1000, 9999)}",
-                    "product_id": prod["id"],
-                    "product_name": prod["name"],
+                    "product_id": prod["product_id"],
+                    "product_name": prod["product_name"],
                     "category": prod["category"],
                     "quantity": qty,
-                    "unit_price": prod["price"],
+                    "unit_price": prod["unit_price"],
                     "discount_percent": discount,
                     "total_amount": total,
                     "payment_method": random.choice(payments),
-                    "city": random.choice(cities),
+                    "city": random.choices(city_names, weights=city_weights, k=1)[0],
                     "channel": random.choice(channels)
                 }
                 

@@ -173,9 +173,27 @@ class LiveDataService:
                 "is_running": self.is_running
             }
 
-    def get_transactions(self, limit=100):
+    def get_transactions(self, limit=100, search=None, category=None, city=None, payment_method=None, channel=None):
         with self.lock:
-            return list(reversed(self.transactions))[:limit]
+            txns = list(reversed(self.transactions))
+            
+            if search:
+                search_lower = search.lower()
+                txns = [t for t in txns if search_lower in t["product_name"].lower() or search_lower in t["transaction_id"].lower() or search_lower in t["product_id"].lower()]
+                
+            if category and category != "All":
+                txns = [t for t in txns if t["category"] == category]
+                
+            if city and city != "All":
+                txns = [t for t in txns if t["city"] == city]
+                
+            if payment_method and payment_method != "All":
+                txns = [t for t in txns if t["payment_method"] == payment_method]
+                
+            if channel and channel != "All":
+                txns = [t for t in txns if t["channel"] == channel]
+                
+            return txns[:limit]
 
     def get_products(self):
         with self.lock:

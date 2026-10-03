@@ -96,8 +96,8 @@ export const getLiveSummary = async () => {
   return response.data;
 };
 
-export const getLiveTransactions = async (limit = 100) => {
-  const response = await apiClient.get(`/api/live/transactions?limit=${limit}`);
+export const getLiveTransactions = async (params = {}) => {
+  const response = await apiClient.get('/api/live/transactions', { params });
   return response.data;
 };
 
@@ -133,6 +133,17 @@ export const getLiveProducts = async () => {
 
 export const resetLiveStream = async () => {
   const response = await apiClient.post('/api/live/reset');
+  return response.data;
+};
+
+// Catalog API Endpoints
+export const getCatalogProducts = async (params) => {
+  const response = await apiClient.get('/api/catalog/products', { params });
+  return response.data;
+};
+
+export const getCatalogFilters = async () => {
+  const response = await apiClient.get('/api/catalog/filters');
   return response.data;
 };
 

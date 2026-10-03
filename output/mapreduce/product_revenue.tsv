@@ -1,12 +1,999 @@
-P001	Wireless Mouse	617149.70
-P002	Mechanical Keyboard	3566850.00
-P003	USB-C Cable	315654.30
-P004	Notebook	164775.00
-P005	Ball Pen Pack	105580.00
-P006	Backpack	1293360.00
-P007	Running Shoes	2770250.00
-P008	Coffee Mug	280187.50
-P009	Water Bottle	484425.00
-P010	Desk Lamp	946050.00
-P011	Smart Watch	5837832.20
-P012	Power Bank	1662075.00
+PRD00001	BrandB Cables V2	237376.22
+PRD00002	Generic Headphones Premium	39311.27
+PRD00003	Generic Electronic Devices Ultra	323162.35
+PRD00004	BrandB Home Audio Ultra	361659.80
+PRD00006	BrandC Televisions Edition	5834.70
+PRD00007	BrandC Home Audio Pro	86591.99
+PRD00008	BrandC Headphones Set	84884.99
+PRD00009	Generic Speakers Edition	101118.59
+PRD00010	BrandC Projectors Essential	5941.82
+PRD00011	BrandA Televisions Max	75049.45
+PRD00012	BrandB Home Audio Ultra	55513.62
+PRD00013	BrandB Headphones Plus	174898.73
+PRD00014	BrandC Speakers Set	50597.39
+PRD00015	BrandA Cables Essential	80047.74
+PRD00016	BrandA Speakers Set	5770.78
+PRD00017	BrandC Laptops Basic	7408.04
+PRD00018	Generic Keyboards Pack	238452.84
+PRD00019	BrandA Keyboards Basic	70810.51
+PRD00021	BrandB Storage Devices Max	205240.60
+PRD00022	BrandC Keyboards Ultra	60276.82
+PRD00023	BrandA Keyboards Edition	3584.43
+PRD00024	BrandB Laptops Basic	213164.49
+PRD00025	BrandB Routers Pro	86698.92
+PRD00026	BrandC Laptops V2	113198.71
+PRD00027	Generic Routers Pro	89322.03
+PRD00028	BrandD Laptops Pack	22126.20
+PRD00029	Generic Feature Phones Max	3096.91
+PRD00030	BrandB Feature Phones Pack	292262.33
+PRD00031	Generic Wireless Chargers Pack	3338.99
+PRD00032	BrandB Power Banks Essential	50541.68
+PRD00034	BrandA Smartphones Max	290565.25
+PRD00035	BrandA Feature Phones Essential	17791.55
+PRD00036	BrandC Power Banks Edition	118568.66
+PRD00037	BrandB Wireless Chargers Max	280550.46
+PRD00038	BrandC Smartphones Ultra	159963.57
+PRD00039	BrandC Wireless Chargers Set	150473.41
+PRD00040	BrandA Phone Cases Pro	171537.29
+PRD00041	BrandC Power Banks Set	1056460.45
+PRD00042	BrandA Phone Cases Pro	17423.80
+PRD00044	BrandC Phone Cases Pro	34788.25
+PRD00045	BrandD Feature Phones Edition	89772.03
+PRD00046	BrandB Feature Phones Ultra	33821.13
+PRD00047	BrandB Smartphones Plus	217614.34
+PRD00048	BrandD Feature Phones Pro	36075.96
+PRD00049	BrandB Feature Phones Premium	79635.84
+PRD00050	BrandA Smartphones Premium	111116.35
+PRD00051	BrandC Power Banks Edition	20145.09
+PRD00053	BrandD Smartphones Essential	81584.40
+PRD00055	BrandB Smartwatches Set	189013.36
+PRD00056	BrandA Smart Glasses Set	121979.54
+PRD00057	BrandC Portable Gadgets Plus	122012.29
+PRD00058	BrandB Fitness Trackers Plus	235282.35
+PRD00059	BrandC Portable Gadgets Pro	133432.42
+PRD00060	BrandC Fitness Trackers Set	182650.49
+PRD00061	BrandB Smart Glasses V2	7197.34
+PRD00062	BrandA Smart Bands Essential	43549.38
+PRD00063	BrandA Smart Bands Pro	5081.07
+PRD00064	BrandD Smart Glasses V2	154271.08
+PRD00065	BrandB Fitness Trackers Plus	60676.90
+PRD00066	BrandD Smartwatches Max	99918.20
+PRD00067	BrandA Fitness Trackers V2	182160.38
+PRD00068	BrandD Fitness Trackers Ultra	29376.09
+PRD00069	Generic Portable Gadgets V2	314062.54
+PRD00070	BrandD Smart Glasses Ultra	156216.59
+PRD00071	Generic Smart Bands Premium	157207.33
+PRD00072	BrandB Fitness Trackers Premium	17615.08
+PRD00073	BrandB Smart Bands Ultra	50409.87
+PRD00074	BrandD Smart Glasses Max	42972.32
+PRD00075	BrandD Smart Bands Basic	49618.35
+PRD00076	BrandD Portable Gadgets Pack	14332.75
+PRD00077	BrandD Smartwatches Plus	101910.47
+PRD00078	BrandD Console Games Premium	167503.18
+PRD00079	BrandB Gaming Consoles Plus	235589.28
+PRD00080	Generic Game Controllers Plus	158712.20
+PRD00082	BrandC Gaming Headsets Essential	74058.20
+PRD00083	BrandA Gaming Headsets Premium	274499.35
+PRD00084	BrandB Gaming Consoles Essential	9037.73
+PRD00085	BrandA Gaming Consoles Basic	520832.01
+PRD00086	Generic Game Controllers Max	6629.98
+PRD00087	Generic PC Games Ultra	122591.21
+PRD00088	BrandA Gaming Consoles Premium	47430.90
+PRD00089	BrandD Gaming Consoles Plus	30971.67
+PRD00090	BrandA Gaming Consoles Basic	225779.23
+PRD00091	BrandA Console Games Pack	122259.70
+PRD00093	BrandD PC Games Essential	10151.55
+PRD00094	BrandC PC Games Set	268978.75
+PRD00095	BrandC Console Games Pack	63355.86
+PRD00096	BrandB Game Controllers V2	17126.95
+PRD00097	BrandD Console Games Pro	40768.31
+PRD00098	BrandC Game Controllers Premium	61530.06
+PRD00099	Generic Console Games Pro	54070.68
+PRD00100	BrandB Gaming Consoles Edition	91742.57
+PRD00101	BrandB PC Games Premium	15113.11
+PRD00102	Generic Game Controllers V2	72800.37
+PRD00103	BrandC Gaming Headsets Essential	195202.02
+PRD00104	BrandC Gaming Headsets Basic	13834.08
+PRD00105	Generic Building Blocks Premium	86875.71
+PRD00106	BrandC Outdoor Toys Basic	30049.63
+PRD00107	BrandB Action Figures Edition	4971.30
+PRD00108	BrandD Educational Toys Ultra	109103.49
+PRD00109	BrandC Educational Toys V2	28859.72
+PRD00110	BrandA Educational Toys Max	61726.15
+PRD00111	BrandC Plush Toys Pack	189.79
+PRD00112	Generic Building Blocks Pack	231109.37
+PRD00113	BrandC Building Blocks V2	249943.19
+PRD00114	BrandA Plush Toys Pack	72237.24
+PRD00115	BrandB Building Blocks Basic	39498.55
+PRD00116	BrandD Educational Toys Pack	83184.31
+PRD00117	BrandA Educational Toys V2	141911.35
+PRD00118	BrandB Action Figures Set	156360.60
+PRD00120	BrandC Educational Toys Pack	91518.83
+PRD00121	BrandC Educational Toys Plus	74621.67
+PRD00122	BrandD Outdoor Toys Pro	9915.14
+PRD00123	Generic Outdoor Toys Set	52446.89
+PRD00124	Generic Educational Toys Premium	51240.40
+PRD00125	BrandB Building Blocks Premium	138261.78
+PRD00126	BrandD Plush Toys Max	176253.48
+PRD00127	BrandC Plush Toys Ultra	48530.47
+PRD00128	BrandA Plush Toys Edition	184669.03
+PRD00129	Generic Educational Toys Plus	25937.35
+PRD00130	BrandC Outdoor Toys Edition	20189.58
+PRD00131	BrandC Plush Toys Basic	96190.83
+PRD00132	BrandA Strategy Games Max	313957.81
+PRD00133	Generic Card Games Pro	67829.67
+PRD00134	BrandD Board Games Max	70487.10
+PRD00135	BrandC Card Games Edition	63710.89
+PRD00136	BrandB Jigsaw Puzzles Edition	54460.35
+PRD00137	BrandA Card Games Ultra	116074.99
+PRD00138	BrandA Jigsaw Puzzles Premium	70935.30
+PRD00139	BrandD Strategy Games Set	26726.67
+PRD00140	Generic Jigsaw Puzzles Edition	113663.81
+PRD00141	Generic Jigsaw Puzzles Basic	167798.01
+PRD00142	BrandD Card Games Essential	105236.72
+PRD00143	BrandB Jigsaw Puzzles Set	189437.42
+PRD00144	BrandA Board Games Essential	176871.08
+PRD00145	BrandD Board Games Ultra	87286.89
+PRD00146	BrandD Sauces Pack	237.76
+PRD00147	BrandC Cereals Plus	5862.69
+PRD00148	BrandC Rice Set	906.54
+PRD00149	BrandA Pulses Set	495.04
+PRD00151	Generic Snacks Basic	1149.40
+PRD00152	Generic Cooking Oils Plus	194.76
+PRD00153	BrandC Sauces V2	1462.37
+PRD00154	BrandC Snacks V2	15879.09
+PRD00155	BrandD Cooking Oils Premium	681905.68
+PRD00156	BrandD Sauces Plus	1162.31
+PRD00157	BrandC Spices Premium	836.50
+PRD00158	BrandC Juices V2	5702.50
+PRD00159	Generic Energy Drinks Basic	2105.70
+PRD00160	BrandA Coffee Set	7944.36
+PRD00161	BrandC Soft Drinks Max	1700291.29
+PRD00162	BrandC Soft Drinks Edition	1551.27
+PRD00163	BrandD Energy Drinks Premium	1417.56
+PRD00164	BrandB Juices Max	2849.82
+PRD00165	BrandA Soft Drinks Essential	4365.90
+PRD00166	BrandC Tea Essential	2561.33
+PRD00167	BrandB Soft Drinks Max	5201.68
+PRD00168	Generic Tea Essential	7459.97
+PRD00169	BrandD Tea Premium	902.46
+PRD00170	BrandA Coffee V2	596.77
+PRD00171	BrandC Coffee V2	2780.05
+PRD00172	BrandA Soft Drinks Plus	732.06
+PRD00173	BrandC Energy Drinks Pro	2952.75
+PRD00174	BrandA Soft Drinks Essential	2124.33
+PRD00175	BrandD Energy Drinks Pro	3455.28
+PRD00176	BrandA Coffee V2	7220.31
+PRD00177	BrandB Energy Drinks Essential	173.90
+PRD00178	BrandB Energy Drinks Edition	8790.48
+PRD00181	BrandB Chips Pro	138738.97
+PRD00182	BrandA Biscuits Max	2216.77
+PRD00183	BrandD Candy Max	3268.64
+PRD00184	Generic Chips Set	337.51
+PRD00185	BrandD Candy V2	535.52
+PRD00186	BrandA Biscuits Max	2278.76
+PRD00187	Generic Popcorn Pack	1336.05
+PRD00188	BrandD Chocolates Premium	4843.52
+PRD00189	Generic Popcorn Max	2391.72
+PRD00190	BrandD Candy Essential	2335.52
+PRD00191	BrandC Candy Essential	3197.73
+PRD00192	BrandA Chips Max	969.56
+PRD00193	BrandA Candy Edition	1001840.58
+PRD00194	BrandC Popcorn Plus	4431.85
+PRD00195	BrandA Biscuits Essential	11498.76
+PRD00196	BrandA Popcorn Basic	1393.56
+PRD00197	BrandB Popcorn Pack	11894.09
+PRD00198	Generic Oats Pro	5182.47
+PRD00199	BrandC Milk Products Premium	5102.20
+PRD00201	Generic Cheese Max	7341.48
+PRD00202	BrandC Breakfast Cereals Essential	2407.75
+PRD00203	BrandB Oats Ultra	11823.82
+PRD00204	BrandD Milk Products Set	2164.29
+PRD00205	BrandA Oats Edition	2301.60
+PRD00206	BrandD Breakfast Cereals Pack	3680.05
+PRD00207	BrandA Butter Pro	59085.36
+PRD00208	BrandC Butter Premium	1312.40
+PRD00209	Generic Milk Products Plus	11530.80
+PRD00210	BrandA Oats Essential	4840.83
+PRD00211	BrandC Milk Products Max	6881.94
+PRD00212	BrandC Breakfast Cereals Plus	1144.48
+PRD00213	BrandD Breakfast Cereals Pack	253802.61
+PRD00214	Generic Milk Products Plus	708.41
+PRD00215	BrandC Oats Basic	997446.70
+PRD00216	BrandB Milk Products Edition	1080.27
+PRD00217	BrandB Butter Ultra	2220.91
+PRD00218	BrandA Cheese Ultra	508.31
+PRD00219	BrandD Breakfast Cereals Pack	3449.08
+PRD00220	BrandB Oats Essential	3424.74
+PRD00221	Generic Milk Products Premium	1149.77
+PRD00223	Generic Butter Max	1037.68
+PRD00224	BrandD Oats Pro	4577.30
+PRD00225	BrandA Vegetables Ultra	2515.68
+PRD00226	Generic Fruits Max	5674.19
+PRD00227	Generic Fruits V2	1414.35
+PRD00228	BrandD Vegetables Plus	9195.80
+PRD00231	BrandD Fresh Produce Premium	37930.26
+PRD00232	BrandB Fruits Essential	3687.09
+PRD00233	BrandA Fruits Essential	1141.72
+PRD00234	BrandB Fresh Produce V2	206.91
+PRD00235	Generic Vegetables Max	2331.85
+PRD00236	BrandB Fruits Pack	10700.12
+PRD00237	BrandB Bakery Pack	1794.70
+PRD00238	BrandD Fruits Basic	6128.49
+PRD00239	Generic Fresh Produce Basic	2364.36
+PRD00240	BrandC Fresh Produce Basic	8557.18
+PRD00241	Generic Bakery Plus	3124.28
+PRD00242	BrandB Bakery Pack	2297.57
+PRD00243	BrandA Fruits Edition	14683.72
+PRD00244	BrandD Fruits Premium	10001.37
+PRD00245	BrandD Vegetables Basic	582.36
+PRD00246	BrandB Fruits Essential	2553.25
+PRD00247	BrandC Fruits Max	69.05
+PRD00248	BrandD Vegetables Ultra	65826.56
+PRD00249	BrandB Fruits Basic	126.48
+PRD00250	BrandA Bakery Premium	272.11
+PRD00251	BrandA Vegetables V2	2374.11
+PRD00252	Generic Bakery Edition	291.50
+PRD00253	BrandB Vegetables Essential	301.03
+PRD00254	BrandC Bakery Edition	4133.51
+PRD00255	BrandA Activewear Edition	205406.73
+PRD00256	BrandA Winter Wear Premium	62810.75
+PRD00257	BrandA Men's Clothing Set	240913.41
+PRD00258	BrandB Kids Clothing Essential	69263.01
+PRD00260	BrandC Kids Clothing Pro	111331.05
+PRD00261	BrandC Activewear V2	36970.17
+PRD00262	BrandC Women's Clothing Pro	204115.85
+PRD00263	BrandD Men's Clothing Plus	122019.03
+PRD00264	BrandC Kids Clothing V2	185833.04
+PRD00265	BrandD Kids Clothing Max	97175.58
+PRD00266	BrandC Women's Clothing Max	115013.80
+PRD00267	BrandD Kids Clothing Ultra	123239.04
+PRD00270	BrandA Women's Clothing V2	100739.82
+PRD00271	BrandD Men's Clothing Essential	97563.11
+PRD00272	BrandC Men's Clothing Essential	24831.36
+PRD00273	BrandC Men's Clothing Plus	73185.67
+PRD00274	BrandD Women's Clothing Ultra	10946.74
+PRD00275	BrandD Winter Wear Premium	6953.72
+PRD00276	BrandB Activewear V2	128237.14
+PRD00277	BrandA Women's Clothing V2	39153.14
+PRD00278	BrandC Kids Clothing Premium	57205.98
+PRD00279	BrandB Women's Clothing Max	40960.19
+PRD00280	Generic Women's Clothing Edition	21102.83
+PRD00281	BrandC Sandals Max	102576.09
+PRD00283	BrandD Women's Shoes V2	245347.75
+PRD00284	Generic Sports Shoes Edition	107683.01
+PRD00285	BrandA Women's Shoes Pro	116495.30
+PRD00286	BrandC Women's Shoes Basic	45006.61
+PRD00287	Generic Sports Shoes Set	59733.12
+PRD00288	Generic Women's Shoes Max	66805.39
+PRD00289	Generic Sandals Set	55673.95
+PRD00290	BrandA Sports Shoes Pro	15176.80
+PRD00291	Generic Boots Basic	44025.73
+PRD00292	Generic Sandals Set	45943.23
+PRD00293	BrandD Boots Set	92658.34
+PRD00294	BrandD Casual Shoes Plus	1123.85
+PRD00295	BrandC Women's Shoes Essential	52697.28
+PRD00296	BrandC Women's Shoes Max	36250.81
+PRD00297	BrandA Casual Shoes Ultra	5615.31
+PRD00298	BrandB Sports Shoes Plus	60591.26
+PRD00299	BrandB Sports Shoes Basic	147363.05
+PRD00300	BrandA Sandals V2	151011.24
+PRD00301	Generic Casual Shoes Basic	249691.72
+PRD00302	BrandD Men's Shoes Set	38302.18
+PRD00303	BrandC Sandals Premium	1271.61
+PRD00304	BrandC Sports Shoes Basic	1591.93
+PRD00305	BrandC Fine Jewellery Edition	1297326.64
+PRD00306	BrandC Rings Plus	1596297.43
+PRD00307	Generic Rings Basic	1856664.89
+PRD00308	BrandC Necklaces Ultra	144674.41
+PRD00309	BrandB Rings Edition	200303.20
+PRD00310	BrandC Rings Pack	884711.43
+PRD00311	Generic Earrings V2	256429.63
+PRD00312	BrandA Necklaces Set	635904.43
+PRD00313	BrandA Rings Set	700467.24
+PRD00314	Generic Necklaces Pack	605530.26
+PRD00315	Generic Fine Jewellery Set	440931.92
+PRD00316	BrandA Fashion Jewellery Pack	224069.37
+PRD00317	BrandB Fine Jewellery Plus	770287.04
+PRD00318	BrandB Rings Pro	2791974.62
+PRD00319	Generic Fashion Jewellery V2	2839926.51
+PRD00320	BrandC Earrings Edition	1119364.91
+PRD00321	BrandC Earrings Set	1442548.30
+PRD00322	BrandC Necklaces Edition	85257.96
+PRD00323	BrandC Earrings V2	460579.77
+PRD00324	BrandD Luxury Watches Edition	669153.38
+PRD00325	BrandA Luxury Watches Premium	419408.27
+PRD00326	BrandD Analog Watches Premium	141077.20
+PRD00327	BrandC Digital Watches Edition	330644.31
+PRD00328	BrandA Analog Watches Basic	1676669.65
+PRD00329	BrandC Digital Watches Plus	158787.89
+PRD00330	BrandB Analog Watches Edition	166146.20
+PRD00331	BrandC Sports Watches Premium	499322.47
+PRD00332	BrandB Analog Watches Pack	199781.79
+PRD00333	BrandA Analog Watches Ultra	335282.82
+PRD00334	BrandA Sports Watches Premium	365545.45
+PRD00335	BrandC Luxury Watches Essential	124587.28
+PRD00336	BrandD Sports Watches Edition	152641.31
+PRD00337	BrandC Digital Watches V2	32773.49
+PRD00338	BrandB Analog Watches Pack	272417.95
+PRD00339	BrandD Sports Watches Max	283246.22
+PRD00340	BrandA Digital Watches Basic	871195.83
+PRD00341	BrandC Sports Watches Essential	1244861.80
+PRD00342	BrandA Analog Watches Basic	88104.26
+PRD00343	BrandC Sports Watches Edition	124016.55
+PRD00344	BrandD Luxury Watches Ultra	151986.98
+PRD00345	Generic Lip Products V2	74482.32
+PRD00346	Generic Foundation Max	147142.90
+PRD00347	Generic Lip Products Edition	372.40
+PRD00348	BrandA Foundation V2	23202.09
+PRD00349	BrandB Eye Makeup V2	37172.70
+PRD00352	BrandA Makeup Edition	27171.73
+PRD00353	BrandD Eye Makeup Ultra	7020.66
+PRD00354	BrandD Eye Makeup Plus	55192.68
+PRD00355	Generic Foundation Ultra	124986.98
+PRD00356	BrandA Foundation Pro	10068.33
+PRD00358	BrandA Foundation Basic	7010.61
+PRD00359	BrandB Eye Makeup Pro	40115.03
+PRD00360	BrandA Makeup Pack	3898.09
+PRD00362	BrandC Lip Products Pack	215089.05
+PRD00363	Generic Lip Products Set	126114.91
+PRD00364	BrandB Eye Makeup Pack	37780.20
+PRD00365	BrandD Eye Makeup Set	2285707.19
+PRD00366	BrandD Lip Products Premium	27604.96
+PRD00367	BrandD Eye Makeup Ultra	16011.87
+PRD00368	BrandD Eye Makeup Ultra	168180.93
+PRD00369	BrandC Moisturizers V2	10290.75
+PRD00370	BrandA Moisturizers Pack	5101.48
+PRD00371	Generic Moisturizers Set	78924.64
+PRD00372	BrandA Face Masks Premium	58020.91
+PRD00373	BrandB Moisturizers V2	53596.30
+PRD00374	BrandC Moisturizers Essential	50422.81
+PRD00375	BrandC Face Masks Premium	186407.33
+PRD00376	BrandC Face Masks V2	169364.72
+PRD00377	BrandB Sunscreen Basic	5814.35
+PRD00378	BrandC Sunscreen Plus	85200.37
+PRD00379	BrandD Moisturizers Basic	82305.21
+PRD00380	BrandD Sunscreen Set	181230.98
+PRD00381	Generic Moisturizers Ultra	135958.85
+PRD00382	BrandA Moisturizers Set	60199.06
+PRD00383	BrandA Face Wash Set	4496.70
+PRD00384	BrandB Face Masks Max	80054.91
+PRD00385	Generic Moisturizers Pack	120888.34
+PRD00386	BrandC Face Masks Edition	2868.97
+PRD00387	BrandB Shampoo Plus	82827.89
+PRD00388	Generic Shampoo Pack	59910.75
+PRD00389	BrandD Hair Oil Essential	116968.50
+PRD00390	BrandA Conditioner Set	18874.65
+PRD00392	Generic Conditioner Essential	7987.13
+PRD00393	BrandD Shampoo Pack	134327.75
+PRD00394	Generic Shampoo Premium	284581.19
+PRD00395	BrandB Shampoo Pro	238018.76
+PRD00396	BrandA Conditioner Plus	52004.74
+PRD00397	Generic Conditioner Plus	105912.65
+PRD00398	Generic Hair Styling Max	11887.62
+PRD00399	Generic Shampoo Essential	310822.14
+PRD00400	BrandC Hair Styling Set	137352.06
+PRD00401	BrandD Hair Styling Plus	57503.58
+PRD00402	BrandA Hair Styling Max	1491041.18
+PRD00403	BrandD Conditioner Ultra	28479.38
+PRD00404	BrandD Hair Oil Premium	9895.67
+PRD00405	BrandD Hair Oil Plus	26840.31
+PRD00407	BrandA Fragrances Plus	43195.19
+PRD00408	BrandB Deodorants Edition	62472.27
+PRD00409	BrandC Fragrances Ultra	55088.58
+PRD00410	BrandC Body Wash Plus	15591.08
+PRD00411	BrandB Body Wash Premium	17445.89
+PRD00412	BrandC Fragrances Ultra	28555.96
+PRD00413	BrandD Deodorants Essential	181312.28
+PRD00414	BrandB Deodorants Pack	189906.04
+PRD00415	BrandC Body Wash V2	109521.01
+PRD00416	BrandD Deodorants Set	137999.20
+PRD00417	BrandC Soaps Plus	35373.72
+PRD00419	BrandC Oral Care V2	98019.01
+PRD00420	BrandB Deodorants Premium	38652.82
+PRD00421	BrandA Oral Care Plus	112801.11
+PRD00422	BrandD Fragrances Edition	41341.44
+PRD00423	Generic Bath Products Edition	44277.15
+PRD00424	BrandB Bath Products Essential	234824.14
+PRD00425	BrandD Bath Products Set	163558.98
+PRD00426	Generic Deodorants Basic	34350.44
+PRD00427	BrandC Fragrances V2	145875.01
+PRD00428	BrandB Deodorants Edition	63693.57
+PRD00429	BrandA Bath Products Max	53339.04
+PRD00430	Generic Body Wash Basic	142756.63
+PRD00431	BrandC Body Wash V2	27070.98
+PRD00432	BrandA Body Wash Essential	86.39
+PRD00433	BrandD Trimmers Plus	102542.43
+PRD00434	BrandD Massagers Set	65333.26
+PRD00435	Generic Hair Dryers V2	220861.51
+PRD00436	Generic Massagers Max	12890.32
+PRD00437	BrandC Trimmers Max	11751.52
+PRD00438	BrandA Shavers Pack	50565.43
+PRD00439	BrandC Shavers Set	141776.40
+PRD00440	BrandC Hair Dryers Basic	35540.39
+PRD00441	BrandD Trimmers Plus	28046.69
+PRD00442	Generic Trimmers V2	59043.13
+PRD00443	BrandD Trimmers Essential	57401.90
+PRD00444	BrandB Hair Dryers V2	32178.85
+PRD00445	BrandD Massagers V2	20746.45
+PRD00446	BrandA Massagers Ultra	188308.33
+PRD00447	BrandC Hair Dryers Pro	12572.11
+PRD00448	Generic Shavers V2	261713.57
+PRD00449	BrandC Hair Dryers Edition	105225.37
+PRD00450	BrandB First Aid Max	45044.09
+PRD00451	BrandD Vitamins Max	6147.30
+PRD00452	Generic Health Supplements Essential	56085.93
+PRD00453	BrandA Health Supplements Basic	92725.37
+PRD00454	BrandC Fitness Supplements Ultra	19206.21
+PRD00455	BrandA Fitness Supplements Edition	21927.05
+PRD00456	BrandB First Aid Set	13152.43
+PRD00457	BrandD Health Supplements Basic	28950.16
+PRD00458	BrandD Health Supplements Plus	20896.47
+PRD00459	BrandD Vitamins Max	82515.80
+PRD00460	BrandD Fitness Supplements V2	71261.53
+PRD00461	BrandD Diapers Max	187923.77
+PRD00462	BrandB Diapers Plus	72069.13
+PRD00463	Generic Baby Clothing Edition	15681.14
+PRD00464	BrandA Baby Toys Set	119304.00
+PRD00465	BrandA Diapers Pro	55581.59
+PRD00466	BrandB Strollers Plus	52829.86
+PRD00467	BrandA Baby Clothing Premium	342899.51
+PRD00468	BrandC Baby Clothing Set	9256.81
+PRD00469	BrandB Strollers Pro	192665.17
+PRD00470	BrandD Diapers Set	5669.65
+PRD00471	BrandB Diapers Plus	414278.08
+PRD00472	BrandA Diapers Max	26929.49
+PRD00474	BrandD Baby Toys Ultra	143049.34
+PRD00475	Generic Baby Wipes Plus	17112.74
+PRD00476	Generic Baby Wipes Max	1014.08
+PRD00477	BrandB Baby Clothing Ultra	54398.23
+PRD00479	BrandD Baby Clothing Basic	48827.31
+PRD00480	BrandD Diapers Basic	135110.03
+PRD00482	BrandD Baby Clothing Pack	22447.88
+PRD00483	BrandA Baby Toys Max	277428.74
+PRD00484	BrandD Diapers Pro	25967.51
+PRD00485	BrandD Baby Clothing Plus	102500.78
+PRD00486	BrandC Diapers Ultra	51850.00
+PRD00487	Generic Baby Clothing Ultra	216487.60
+PRD00488	BrandA Strollers Set	175814.60
+PRD00489	BrandD Storage Max	13706.87
+PRD00490	BrandA Home Organization Ultra	11254.56
+PRD00491	Generic Storage Essential	38245.07
+PRD00492	BrandA Household Accessories Premium	1755.37
+PRD00493	BrandC Household Accessories Max	165972.95
+PRD00494	BrandD Home Organization Pro	147453.23
+PRD00495	Generic Storage Max	8398.36
+PRD00497	BrandA Home Essentials Ultra	225645.46
+PRD00498	BrandC Home Essentials Essential	6969.69
+PRD00499	BrandB Household Accessories Pro	59526.68
+PRD00500	BrandC Home Organization V2	29613.75
+PRD00501	BrandC Household Accessories Basic	3893.41
+PRD00502	Generic Household Accessories Essential	85371.23
+PRD00505	BrandB Home Essentials Max	229728.09
+PRD00506	BrandC Storage Ultra	54139.42
+PRD00507	BrandD Home Organization Edition	163479.10
+PRD00508	Generic Home Essentials Max	19041.98
+PRD00509	BrandB Home Essentials Ultra	2543.79
+PRD00510	BrandC Household Accessories Plus	48746.64
+PRD00511	BrandB Home Essentials Basic	29126.65
+PRD00513	BrandC Desks V2	159293.86
+PRD00514	BrandC Tables Set	66467.36
+PRD00515	BrandA Sofas Ultra	100132.40
+PRD00516	BrandC Tables Premium	1814.67
+PRD00517	Generic Sofas Edition	85085.35
+PRD00519	BrandB Sofas Ultra	252914.83
+PRD00520	Generic Tables Max	513756.91
+PRD00521	BrandB Tables Max	47143.11
+PRD00522	BrandA Beds V2	63232.49
+PRD00523	BrandA Desks V2	177718.64
+PRD00524	BrandC Office Furniture Ultra	99689.60
+PRD00525	BrandD Clocks V2	161134.30
+PRD00526	BrandB Rugs Plus	912571.22
+PRD00527	BrandD Clocks Pro	80067.51
+PRD00528	Generic Rugs Pack	59846.41
+PRD00530	BrandB Cushions Pack	24247.97
+PRD00531	BrandA Wall Art Edition	13988.52
+PRD00532	BrandB Curtains Essential	111574.98
+PRD00534	BrandB Cushions Pack	140924.71
+PRD00536	BrandC Curtains Pro	105328.82
+PRD00537	BrandC Clocks Ultra	25300.70
+PRD00538	BrandA Wall Art Ultra	138799.40
+PRD00539	BrandD Cushions Set	191121.35
+PRD00540	BrandD Wall Art Ultra	59803.01
+PRD00541	BrandC Cushions Pack	298208.78
+PRD00542	BrandB Curtains Premium	22449.64
+PRD00544	BrandB Clocks Pack	190506.93
+PRD00545	BrandB Wall Art Max	47358.49
+PRD00546	BrandC Cushions Max	206058.82
+PRD00547	BrandC Wall Art Max	44272.16
+PRD00548	BrandD Wall Art V2	9645.03
+PRD00549	BrandA Containers Plus	107103.08
+PRD00550	BrandD Tableware Ultra	183640.22
+PRD00551	BrandA Cookware Max	23046.30
+PRD00552	Generic Pressure Cookers Max	5382.92
+PRD00553	BrandA Kitchen Tools V2	102436.57
+PRD00554	BrandA Pressure Cookers Pro	76793.79
+PRD00555	Generic Pressure Cookers Edition	27346.88
+PRD00556	Generic Kitchen Tools Plus	10115.67
+PRD00557	BrandA Containers Plus	38977.74
+PRD00558	BrandB Tableware Basic	13725.43
+PRD00559	BrandD Cookware Plus	54480.75
+PRD00560	BrandC Kitchen Tools Plus	1911.25
+PRD00561	BrandC Containers Basic	63275.54
+PRD00562	BrandA Cookware Max	278749.23
+PRD00564	BrandD Containers Edition	146186.28
+PRD00565	Generic Pressure Cookers Pro	24343.76
+PRD00566	BrandB Tableware Pack	50588.87
+PRD00567	BrandB Containers Basic	150688.07
+PRD00569	BrandA Tableware Max	81554.68
+PRD00570	Generic Tableware Premium	129936.66
+PRD00571	BrandD Cookware Edition	89622.80
+PRD00572	BrandA Blenders Max	234199.79
+PRD00573	BrandD Mixers Essential	262221.71
+PRD00574	BrandA Ovens V2	83546.23
+PRD00576	BrandA Ovens Basic	74558.58
+PRD00577	BrandC Microwaves Premium	3490.88
+PRD00578	BrandB Ovens Basic	123078.13
+PRD00580	BrandD Blenders Plus	172496.99
+PRD00581	BrandA Microwaves Ultra	60582.72
+PRD00582	Generic Coffee Machines Edition	20089.73
+PRD00583	BrandB Blenders Pro	30185.95
+PRD00584	BrandC Ovens Premium	1999938.09
+PRD00585	BrandA Coffee Machines Set	70811.30
+PRD00586	Generic Microwaves V2	135188.90
+PRD00587	BrandA Microwaves Premium	34144.15
+PRD00588	BrandB Mixers Pack	12879.72
+PRD00589	Generic Blenders Plus	4181.62
+PRD00590	Generic Mixers Ultra	1813.91
+PRD00591	BrandC Blenders Premium	176519.22
+PRD00592	BrandD Ovens Basic	113771.97
+PRD00593	BrandA Coffee Machines Max	61648.29
+PRD00595	BrandC Refrigerators Essential	74624.12
+PRD00596	BrandA Air Conditioners Basic	69206.58
+PRD00597	BrandD Water Heaters Pro	126525.71
+PRD00598	Generic Air Conditioners Pro	79265.17
+PRD00599	Generic Washing Machines Set	143138.83
+PRD00600	Generic Air Conditioners Set	130137.51
+PRD00601	BrandB Air Conditioners Edition	169774.12
+PRD00602	BrandD Refrigerators Premium	36447.94
+PRD00604	BrandD Refrigerators Max	144458.72
+PRD00606	BrandB Air Conditioners V2	35025.40
+PRD00607	BrandB Washing Machines Set	174108.16
+PRD00608	Generic Refrigerators Ultra	278782.79
+PRD00609	Generic Water Heaters Ultra	121015.70
+PRD00611	Generic Washing Machines Essential	82086.95
+PRD00612	BrandB Refrigerators Basic	206119.64
+PRD00613	BrandC Air Conditioners Pack	31216.62
+PRD00614	BrandD Refrigerators Premium	73323.74
+PRD00615	BrandC Air Conditioners Ultra	196616.24
+PRD00616	BrandA Air Conditioners Plus	16911.24
+PRD00617	Generic Washing Machines Pro	42403.77
+PRD00618	BrandD Washing Machines Pro	223249.22
+PRD00620	BrandD Cleaning Tools Premium	871.41
+PRD00621	BrandD Detergents Premium	637.70
+PRD00622	BrandA Floor Cleaners Plus	5053.05
+PRD00623	BrandB Laundry Products V2	5779.86
+PRD00624	BrandC Detergents Basic	6115.35
+PRD00625	BrandD Floor Cleaners Basic	891.49
+PRD00626	BrandD Detergents Pack	3112.43
+PRD00627	BrandC Laundry Products Max	750.66
+PRD00628	BrandA Cleaning Tools V2	1248.15
+PRD00629	BrandC Detergents Essential	14730.82
+PRD00630	BrandB Laundry Products Ultra	176.87
+PRD00631	BrandA Floor Cleaners Premium	5233.99
+PRD00632	BrandC Floor Cleaners V2	2682.94
+PRD00634	Generic Power Tools V2	76920.42
+PRD00635	BrandA Power Tools Pack	59748.13
+PRD00636	BrandD Electrical Supplies Plus	5357.80
+PRD00637	Generic Hand Tools Set	25170.46
+PRD00638	Generic Power Tools Essential	72041.70
+PRD00639	BrandC Hand Tools V2	43927.08
+PRD00640	BrandA Power Tools Pack	14179.45
+PRD00641	BrandB Power Tools V2	17276.54
+PRD00642	BrandA Electrical Supplies Premium	14976.01
+PRD00643	BrandA Power Tools Basic	18771.07
+PRD00644	BrandD Electrical Supplies V2	33402.15
+PRD00645	BrandA Hand Tools Pro	74095.49
+PRD00646	Generic Electrical Supplies Pack	5266.69
+PRD00647	BrandC Power Tools Essential	8641.05
+PRD00648	Generic Power Tools Pack	20115.71
+PRD00649	BrandB Hardware Set	658.71
+PRD00650	Generic Hardware Premium	31889.15
+PRD00652	BrandA Electrical Supplies Basic	40520.53
+PRD00653	BrandA Power Tools Essential	27502.72
+PRD00654	BrandA Hand Tools Pack	68938.71
+PRD00655	BrandD Electrical Supplies Ultra	19859.12
+PRD00656	BrandD Hand Tools Pack	16322.65
+PRD00657	BrandA Power Tools Ultra	15784.78
+PRD00658	BrandB Table Lamps Pack	30084.17
+PRD00659	BrandB Smart Lights V2	110748.19
+PRD00660	BrandC Smart Lights Edition	221665.28
+PRD00661	BrandB Table Lamps Set	215193.43
+PRD00662	BrandB Ceiling Lights Essential	25688.03
+PRD00663	BrandD Table Lamps Edition	220246.68
+PRD00664	BrandC Smart Lights Edition	113745.96
+PRD00666	BrandC Ceiling Lights Premium	106417.46
+PRD00667	BrandA LED Bulbs Edition	81252.18
+PRD00668	BrandB Smart Lights Edition	213310.11
+PRD00669	BrandA Smart Lights Premium	270691.86
+PRD00670	BrandC Smart Lights Set	172950.49
+PRD00671	BrandB LED Bulbs V2	54659.90
+PRD00673	BrandA LED Bulbs Edition	32918.33
+PRD00674	BrandB LED Bulbs Ultra	148701.29
+PRD00675	BrandA Table Lamps Ultra	28619.84
+PRD00676	Generic Table Lamps Set	95502.35
+PRD00677	BrandC Smart Lights Max	118258.61
+PRD00678	BrandB Ceiling Lights Edition	77268.38
+PRD00679	BrandC Smart Lights Set	131761.58
+PRD00680	Generic Table Lamps Pack	55689.93
+PRD00681	Generic LED Bulbs Basic	126341.82
+PRD00683	Generic Smart Lights Pro	109976.49
+PRD00684	BrandB Smart Lights Set	60218.55
+PRD00686	BrandD LED Bulbs Basic	36104.85
+PRD00687	BrandB Outdoor Furniture Set	70631.95
+PRD00688	BrandA Outdoor Furniture Max	15635.31
+PRD00689	BrandC Seeds Basic	69370.06
+PRD00690	BrandA Outdoor Furniture Essential	142564.80
+PRD00691	BrandA Gardening Tools Pack	275887.73
+PRD00692	BrandA Gardening Tools Edition	20338.41
+PRD00693	BrandD Seeds V2	43529.00
+PRD00694	BrandD Gardening Tools Ultra	152764.45
+PRD00695	BrandC Seeds Set	21748.44
+PRD00696	BrandD Planters Pack	8880.41
+PRD00697	BrandB Gardening Tools Essential	75479.49
+PRD00698	BrandB Planters Premium	8328.22
+PRD00699	Generic Planters Pro	109508.05
+PRD00700	BrandB Gardening Tools Max	28132.28
+PRD00701	BrandB Outdoor Furniture Set	19306.93
+PRD00702	BrandD Seeds Essential	241898.21
+PRD00703	Generic Swimming Ultra	281294.49
+PRD00704	BrandA Tennis Ultra	246249.39
+PRD00705	BrandD Football Set	51427.73
+PRD00706	BrandD Tennis V2	202531.60
+PRD00707	BrandB Tennis Max	155758.45
+PRD00708	Generic Cricket Ultra	187794.57
+PRD00709	BrandA Tennis Max	294289.27
+PRD00710	BrandB Cricket Pack	26682.18
+PRD00711	BrandD Swimming Edition	183094.08
+PRD00712	BrandC Tennis Pack	190646.93
+PRD00713	Generic Badminton Essential	3626.06
+PRD00714	BrandB Football Pack	176215.29
+PRD00715	BrandB Football Pack	29117.54
+PRD00716	BrandC Tennis Premium	6610.29
+PRD00717	BrandD Cricket Essential	132154.10
+PRD00718	BrandC Badminton Set	3721.24
+PRD00719	Generic Swimming Premium	153396.13
+PRD00720	Generic Swimming Essential	74338.27
+PRD00721	Generic Swimming Basic	74479.23
+PRD00722	Generic Tennis V2	34943.86
+PRD00723	BrandC Yoga Mats Edition	10354.15
+PRD00724	BrandB Yoga Mats Max	77367.49
+PRD00725	BrandD Exercise Equipment V2	55366.73
+PRD00727	Generic Yoga Mats Set	2127.28
+PRD00728	Generic Fitness Accessories Ultra	34215.41
+PRD00729	BrandC Fitness Accessories Set	48727.65
+PRD00730	BrandB Yoga Mats V2	110224.85
+PRD00731	Generic Treadmills Ultra	394920.39
+PRD00732	Generic Exercise Equipment V2	271989.88
+PRD00733	BrandA Dumbbells Max	139747.14
+PRD00734	BrandB Fitness Accessories Plus	205096.77
+PRD00735	BrandA Dumbbells Pack	211065.13
+PRD00736	BrandB Fitness Accessories Set	42578.75
+PRD00737	BrandD Fitness Accessories Set	403155.57
+PRD00738	BrandD Treadmills Edition	12710.92
+PRD00739	Generic Treadmills Pack	5425.14
+PRD00740	BrandA Treadmills Basic	140952.46
+PRD00741	BrandA Fitness Accessories Basic	27307.87
+PRD00742	BrandB Fitness Accessories Plus	220201.48
+PRD00743	Generic Treadmills Set	28952.25
+PRD00744	Generic Exercise Equipment Essential	53797.29
+PRD00745	BrandD Treadmills Edition	38626.27
+PRD00746	Generic Exercise Equipment Premium	232950.12
+PRD00747	BrandA Treadmills Set	51589.92
+PRD00748	BrandB Treadmills Max	198983.64
+PRD00749	BrandA Hiking Gear Set	177253.53
+PRD00750	BrandB Backpacks Max	8852.50
+PRD00752	Generic Backpacks Set	55522.28
+PRD00753	BrandD Tents Set	156155.83
+PRD00754	BrandC Tents Edition	143856.16
+PRD00755	Generic Tents Basic	28450.58
+PRD00756	BrandA Tents Ultra	41990.67
+PRD00757	BrandB Backpacks Pack	122099.76
+PRD00758	Generic Tents Max	7175.76
+PRD00759	Generic Hiking Gear Basic	76414.82
+PRD00760	BrandB Backpacks Premium	103824.76
+PRD00761	BrandA Tents Essential	99788.16
+PRD00762	BrandC Hiking Gear Pack	253801.71
+PRD00763	BrandD Backpacks Essential	135891.66
+PRD00764	BrandB Tents Plus	16317.80
+PRD00765	BrandA Hiking Gear Edition	91604.37
+PRD00766	BrandA Sleeping Bags Essential	151770.44
+PRD00767	BrandC Sleeping Bags Pack	46135.66
+PRD00768	BrandC Sleeping Bags Basic	3395.16
+PRD00769	BrandC Sleeping Bags Pack	24929.50
+PRD00770	BrandD Tents Set	42917.44
+PRD00771	BrandD Car Accessories Essential	27343.74
+PRD00772	BrandC Helmets Edition	93793.24
+PRD00773	BrandD Bike Accessories Edition	20359.07
+PRD00774	BrandB Car Accessories Set	29930.85
+PRD00775	BrandA Car Accessories Pro	13537.51
+PRD00776	BrandC Vehicle Cleaning Pack	18386.84
+PRD00777	BrandC Helmets Pack	47589.40
+PRD00778	BrandC Bike Accessories Essential	13353.01
+PRD00779	BrandB Helmets Pack	10874.66
+PRD00780	BrandB Helmets Plus	23133.59
+PRD00781	BrandB Travel Accessories V2	88304.38
+PRD00783	BrandD Travel Accessories Premium	5482.12
+PRD00784	Generic Travel Accessories Essential	70826.38
+PRD00785	Generic Duffel Bags Essential	57911.24
+PRD00786	Generic Trolleys Essential	114514.06
+PRD00787	BrandD Travel Accessories Premium	53325.94
+PRD00788	Generic Trolleys Plus	171061.69
+PRD00789	BrandC Travel Accessories Ultra	26086.32
+PRD00790	Generic Duffel Bags Premium	35435.02
+PRD00791	Generic Duffel Bags Essential	151348.74
+PRD00792	BrandB Travel Accessories Pro	2849.72
+PRD00793	BrandB Duffel Bags Max	30381.31
+PRD00794	Generic Travel Accessories V2	1068.74
+PRD00795	BrandC Pet Beds Max	342176.38
+PRD00796	BrandC Cat Food Basic	26177.90
+PRD00797	BrandA Cat Food Pro	131015.58
+PRD00798	BrandC Pet Toys Edition	224048.75
+PRD00799	BrandB Pet Beds Edition	471063.29
+PRD00800	BrandD Pet Beds Pack	329016.59
+PRD00801	BrandA Pet Toys Basic	241731.59
+PRD00803	BrandD Cat Food Pro	202303.36
+PRD00805	BrandD Academic Books Plus	259181.34
+PRD00806	BrandB Non-Fiction Plus	17760.37
+PRD00807	BrandC Fiction Pack	28610.28
+PRD00808	BrandB Self-Development Max	84981.14
+PRD00809	BrandC Academic Books V2	171524.66
+PRD00811	BrandD Non-Fiction Ultra	22953.30
+PRD00812	BrandD Non-Fiction Essential	4608.85
+PRD00813	BrandC Business Books Pro	68622.49
+PRD00814	BrandB Non-Fiction V2	6926.76
+PRD00815	BrandB Academic Books Max	229552.08
+PRD00816	BrandD Business Books Basic	14920.76
+PRD00817	BrandC Self-Development Plus	29236.58
+PRD00818	Generic Non-Fiction Edition	8838.03
+PRD00819	BrandA Academic Books Essential	44220.03
+PRD00820	BrandB Fiction Pro	98532.43
+PRD00821	BrandA Self-Development Pro	323643.92
+PRD00822	BrandB Business Books Max	28298.01
+PRD00823	BrandA Business Books Set	93430.63
+PRD00824	BrandB Academic Books Max	319544.33
+PRD00825	BrandC Non-Fiction Set	70058.05
+PRD00826	BrandC Non-Fiction Ultra	14932.92
+PRD00827	BrandD Business Books Edition	60241.02
+PRD00828	BrandC Self-Development V2	103065.22
+PRD00829	BrandC Self-Development V2	191504.79
+PRD00830	Generic Self-Development Set	5053.36
+PRD00831	Generic Non-Fiction Essential	79209.35
+PRD00832	BrandB Office Supplies Plus	155072.34
+PRD00833	BrandC Organizers Premium	73158.84
+PRD00834	BrandA Writing Supplies Max	24259.23
+PRD00836	BrandD Office Supplies Set	294825.04
+PRD00837	BrandA Writing Supplies Max	109114.37
+PRD00838	BrandA Organizers V2	119368.73
+PRD00839	Generic Organizers Pro	205484.22
+PRD00840	BrandB Office Supplies Max	253252.37
+PRD00841	BrandB Office Supplies Plus	44272.24
+PRD00842	Generic Notebooks Edition	107502.94
+PRD00843	BrandD Office Supplies Set	82842.59
+PRD00844	Generic Office Supplies Plus	72285.39
+PRD00845	BrandC Notebooks Essential	264005.00
+PRD00846	BrandD Writing Supplies Set	80339.34
+PRD00847	BrandC Notebooks Edition	26834.61
+PRD00848	BrandC Organizers Pro	140487.86
+PRD00849	BrandA Office Supplies Premium	169165.74
+PRD00850	Generic Notebooks Premium	86883.97
+PRD00851	BrandC Notebooks Ultra	20269.81
+PRD00852	Generic Pencils Max	153257.25
+PRD00853	BrandD Markers Essential	59078.36
+PRD00854	BrandA School Bags Pack	165886.26
+PRD00855	BrandC Art Supplies Pro	10853.72
+PRD00856	Generic School Bags Basic	23550.39
+PRD00857	BrandB School Bags Pack	665.88
+PRD00858	BrandD Markers Set	63271.60
+PRD00859	BrandC Markers Plus	32511.60
+PRD00860	BrandA Pencils Pack	36568.21
+PRD00861	BrandB School Bags Plus	26370.29
+PRD00862	Generic School Bags Set	60970.62
+PRD00863	BrandB Markers Basic	78170.26
+PRD00865	BrandC School Bags Essential	116282.14
+PRD00866	Generic Pens Essential	59231.71
+PRD00867	BrandB Markers Basic	9148.23
+PRD00868	BrandA Pencils Max	194262.71
+PRD00869	BrandA Markers Premium	106739.82
+PRD00870	BrandB Pens Essential	256629.10
+PRD00871	Generic Pencils Premium	183987.44
+PRD00872	BrandA Markers Set	33908.89
+PRD00873	BrandB Markers Premium	45576.11
+PRD00874	BrandA Art Supplies Premium	293080.05
+PRD00875	BrandC Pens Set	356912.11
+PRD00876	BrandB Pens Plus	67877.58
+PRD00877	BrandD Markers Essential	28386.05
+PRD00879	BrandD Pens Essential	172933.40
+PRD00880	BrandC Guitars Set	207531.40
+PRD00882	BrandD Microphones Essential	84577.15
+PRD00883	Generic Guitars Set	770725.03
+PRD00884	Generic Drums Premium	122920.37
+PRD00885	Generic Drums Ultra	338826.68
+PRD00886	BrandB Keyboards Edition	346983.99
+PRD00887	BrandC Keyboards Ultra	299167.07
+PRD00888	BrandC Microphones Ultra	458417.81
+PRD00889	BrandD Guitars Plus	713330.87
+PRD00890	BrandC Drums Set	407000.66
+PRD00891	Generic Keyboards Pack	59759.94
+PRD00893	BrandD Pianos Pack	1362.64
+PRD00894	BrandB Keyboards Ultra	524626.39
+PRD00895	BrandD Painting Premium	13093.04
+PRD00896	Generic Sketching V2	9264.52
+PRD00898	Generic DIY Kits Pack	106901.26
+PRD00899	BrandB Painting Pro	95505.02
+PRD00901	BrandC Sketching Premium	29790.00
+PRD00902	Generic Sketching Pro	45074.16
+PRD00903	BrandA DIY Kits Edition	108916.63
+PRD00904	BrandB Sketching Pro	93942.26
+PRD00906	BrandA Painting Essential	194350.97
+PRD00907	BrandB DIY Kits Pack	109802.10
+PRD00908	BrandB DIY Kits Pack	23337.04
+PRD00909	BrandC Sketching Plus	130437.52
+PRD00910	BrandB DIY Kits Ultra	8736.25
+PRD00911	BrandA Craft Kits Edition	27465.66
+PRD00912	BrandD Wallets V2	209799.37
+PRD00913	BrandC Handbags Edition	9673.79
+PRD00914	BrandA Wallets Essential	9153.94
+PRD00915	BrandC Handbags Premium	115126.01
+PRD00916	BrandC Handbags Ultra	312346.90
+PRD00917	BrandA Wallets Essential	135815.94
+PRD00918	BrandD Laptop Bags Max	250688.04
+PRD00919	BrandC Handbags Premium	50121.10
+PRD00920	BrandA Sling Bags Pack	114366.92
+PRD00921	BrandD Handbags Premium	48757.53
+PRD00923	BrandB Sling Bags V2	164736.09
+PRD00925	Generic Sling Bags Basic	49170.72
+PRD00927	BrandC Wallets Max	51944.22
+PRD00928	BrandC Laptop Bags Essential	25484.96
+PRD00929	BrandD Handbags Essential	54336.96
+PRD00930	BrandD Handbags Set	40027.05
+PRD00931	Generic Laptop Bags Pro	142742.88
+PRD00932	BrandC Laptop Bags Pack	13499.84
+PRD00933	BrandC Handbags Pro	45210.04
+PRD00934	BrandA Wallets Pack	72247.34
+PRD00935	BrandD Laptop Bags Max	55237.04
+PRD00936	Generic Laptop Bags Basic	254996.89
+PRD00937	BrandA Safes Basic	226.59
+PRD00938	BrandB Safes Ultra	43075.66
+PRD00939	BrandB Alarm Systems Essential	19193.62
+PRD00940	Generic Locks Plus	2721.33
+PRD00941	BrandA Safes Pack	8998.86
+PRD00942	BrandC Alarm Systems Set	2148.46
+PRD00943	BrandB Security Cameras Basic	9195.16
+PRD00944	BrandA Security Cameras Set	35757.27
+PRD00945	Generic Locks Pack	15364.99
+PRD00946	BrandC Safes Essential	17075.66
+PRD00947	Generic Security Cameras Premium	21602.74
+PRD00948	BrandA Alarm Systems Set	1179.24
+PRD00949	Generic Alarm Systems Pack	47580.17
+PRD00950	Generic Security Cameras Set	48239.27
+PRD00951	BrandA Alarm Systems V2	12216.38
+PRD00952	Generic Smart Cameras Ultra	71190.00
+PRD00953	BrandC Smart Locks Set	169778.35
+PRD00954	BrandC Smart Cameras Max	37932.36
+PRD00955	Generic Smart Cameras Essential	83587.67
+PRD00956	BrandC Smart Bulbs Max	191792.63
+PRD00957	Generic Smart Plugs Plus	180123.34
+PRD00958	BrandD Smart Bulbs V2	64183.98
+PRD00959	BrandD Smart Locks Plus	336459.28
+PRD00960	BrandA Smart Locks Set	87706.76
+PRD00961	Generic Smart Cameras Essential	41143.90
+PRD00962	Generic Smart Cameras Max	43080.93
+PRD00963	BrandA Smart Cameras Pro	66995.92
+PRD00964	BrandA Smart Bulbs Set	33313.16
+PRD00965	Generic Smart Bulbs Pack	150075.90
+PRD00966	Generic Smart Bulbs Premium	33717.81
+PRD00967	Generic Smart Cameras Max	109465.22
+PRD00968	BrandC Smart Cameras Pro	267515.66
+PRD00969	BrandA Smart Plugs Premium	266789.18
+PRD00970	BrandD Smart Cameras Essential	181533.19
+PRD00971	BrandB Security Software V2	89944.03
+PRD00972	BrandB Digital Subscriptions Plus	147392.89
+PRD00973	BrandA Digital Subscriptions Set	4276.74
+PRD00974	BrandA Digital Subscriptions Ultra	28613.83
+PRD00975	BrandD Digital Subscriptions Pack	300306.88
+PRD00976	BrandD Productivity Software V2	53530.98
+PRD00977	BrandD Productivity Software Pack	55597.85
+PRD00978	Generic Digital Subscriptions Edition	56500.06
+PRD00979	BrandA Productivity Software Essential	368313.85
+PRD00980	BrandC Security Software Edition	48000.57
+PRD00981	BrandA Digital Subscriptions Set	2388.44
+PRD00983	BrandC Security Software Pack	177973.29
+PRD00984	BrandB Security Software Premium	55541.50
+PRD00985	BrandC Digital Subscriptions Pack	43193.35
+PRD00986	BrandC Digital Subscriptions Pro	63755.65
+PRD00987	BrandA Productivity Software Edition	16624.72
+PRD00988	BrandA Security Software Premium	33390.85
+PRD00989	BrandD Digital Subscriptions Ultra	96255.11
+PRD00990	BrandB Productivity Software V2	96484.22
+PRD00991	Generic Productivity Software Ultra	13101.03
+PRD00992	BrandB Security Software Plus	106074.56
+PRD00994	BrandD Movies Premium	33888.53
+PRD00995	BrandC Music V2	25755.14
+PRD00996	Generic Digital Entertainment Essential	4732.37
+PRD00998	Generic Collectibles Premium	308193.17
+PRD00999	Generic Digital Entertainment Set	69307.11
+PRD01001	Generic Movies Max	4040.64
+PRD01002	BrandB Digital Entertainment Premium	35251.62
+PRD01003	BrandB Movies Pack	22852.63
+PRD01004	BrandB Movies Pack	27995.88
+PRD01005	BrandC Music Premium	248264.67
+PRD01006	BrandD Movies Premium	96459.61
+PRD01007	BrandD Collectibles Pro	21077.67
+PRD01008	BrandB Collectibles Premium	61332.44
+PRD01009	BrandD Movies Pack	94260.38
+PRD01010	BrandB Digital Entertainment Plus	116331.41
+PRD01011	BrandA Movies Max	109276.66
+PRD01012	BrandA Movies V2	78952.71
+PRD01013	BrandD Music Pro	6868.57
+PRD01014	BrandA Music Pack	226041.37
+PRD01015	Generic Digital Entertainment Max	101389.83
+PRD01016	BrandA Movies V2	354707.00
+PRD01017	BrandA Collectibles Pro	32769.77
+PRD01018	BrandB Collectibles Premium	44575.47
+PRD01019	BrandD Movies Premium	138608.79
+PRD01020	BrandB Collectibles V2	73345.86
+PRD01021	BrandB Movies Pack	117564.36
+PRD01022	BrandA Digital Entertainment V2	83951.98
+PRD01023	BrandA Model Kits Plus	613692.76
+PRD01024	Generic Trading Items Set	317970.93
+PRD01025	BrandB Trading Items Pro	1434648.37
+PRD01026	BrandB Trading Items Set	122.46
+PRD01027	BrandD Model Kits Max	2150800.06
+PRD01028	BrandA Model Kits Max	241456.14
+PRD01029	BrandD Trading Items Basic	210230.56
+PRD01030	Generic Trading Items Set	707095.82
+PRD01031	BrandA Model Kits Basic	1314382.61
+PRD01032	BrandD Model Kits Ultra	65059.74
+PRD01034	BrandD Model Kits Pro	20921.39
+PRD01035	BrandC Model Kits Pack	4916.94
+PRD01036	BrandB Trading Items Ultra	399806.65
+PRD01037	BrandB Trading Items Basic	1170850.60
+PRD01038	BrandA Trading Items Pack	71390.93
+PRD01039	BrandA Hobby Kits Basic	1498847.37
+PRD01041	BrandA Hobby Kits Premium	317889.58
+PRD01042	BrandD Model Kits V2	276887.73
+PRD01043	BrandC Personalized Gift Simulation Essential	3272.67
+PRD01044	BrandA Greeting Cards V2	38247.71
+PRD01045	BrandD Personalized Gift Simulation Pro	60160.26
+PRD01046	Generic Gift Sets Pack	123851.85
+PRD01047	BrandB Greeting Cards Essential	108300.78
+PRD01048	BrandB Greeting Cards Plus	89397.58
+PRD01049	BrandB Gift Sets Plus	6043.28
+PRD01050	BrandD Personalized Gift Simulation Ultra	47401.25
+PRD01052	BrandD Personalized Gift Simulation Max	72643.28
+PRD01053	Generic Greeting Cards Premium	40017.51
+PRD01054	Generic Personalized Gift Simulation Pack	194240.04
+PRD01055	Generic Gift Sets Basic	157280.18
+PRD01056	BrandB Greeting Cards Basic	131914.59
+PRD01057	BrandB Greeting Cards Pack	341829.89
+PRD01059	BrandD Diyas Max	114348.45
+PRD01060	BrandB Pooja Essentials Plus	1503.50
+PRD01061	BrandA Diyas Max	195342.91
+PRD01063	BrandB Diyas Plus	24849.50
+PRD01064	BrandA Festival Decorations Set	188844.43
+PRD01065	BrandC Festival Decorations Plus	33225.68
+PRD01066	BrandA Festival Decorations Set	108612.22
+PRD01068	BrandC Household Consumables Essential	1002.82
+PRD01069	BrandB Office Consumables Basic	214.16
+PRD01070	BrandB Everyday Consumables Pack	4444.81
+PRD01071	BrandD Household Consumables Set	1050.53
+PRD01072	Generic Everyday Consumables Edition	635721.89
+PRD01073	BrandC Household Consumables Edition	2790.30
+PRD01074	BrandB Office Consumables Max	6645.44
+PRD01075	BrandA Everyday Consumables Max	66944.02
+PRD01076	BrandB Household Consumables Ultra	3696.01
+PRD01077	BrandB Office Consumables Edition	81252.92
+PRD01078	BrandC Household Consumables Pro	1634.51
+PRD01079	BrandC Everyday Consumables Edition	146238.18
+PRD01080	BrandD Office Consumables Essential	8294.88

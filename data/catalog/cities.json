@@ -1,0 +1,226 @@
+[
+  {
+    "city_name": "Jaipur",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Ludhiana",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Jodhpur",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Prayagraj",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Ahmedabad",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Ranchi",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Rajkot",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Chandigarh",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Raipur",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Chennai",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Mumbai",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Delhi",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Indore",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Navi Mumbai",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Tirupati",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Bhopal",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Ghaziabad",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Guwahati",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Madurai",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Dhanbad",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Kolkata",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Amritsar",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Kochi",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Srinagar",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Vijayawada",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Faridabad",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Vadodara",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Bengaluru",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Vasai-Virar",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Udaipur",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Coimbatore",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Bhubaneswar",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Thiruvananthapuram",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Hyderabad",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Surat",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Agra",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Nashik",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Thane",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Pune",
+    "demand_weight": 5
+  },
+  {
+    "city_name": "Aurangabad",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Varanasi",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Lucknow",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "New Delhi",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Mangaluru",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Kozhikode",
+    "demand_weight": 3
+  },
+  {
+    "city_name": "Noida",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Patna",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Jammu",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Mysuru",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Gurugram",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Dehradun",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Visakhapatnam",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Nagpur",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Jamshedpur",
+    "demand_weight": 2
+  },
+  {
+    "city_name": "Meerut",
+    "demand_weight": 1
+  },
+  {
+    "city_name": "Kanpur",
+    "demand_weight": 2
+  }
+]

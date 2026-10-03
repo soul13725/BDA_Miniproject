@@ -1,0 +1,214 @@
+[
+  {
+    "category_name": "Electronics",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Computers",
+    "demand_weight": 10
+  },
+  {
+    "category_name": "Mobile Phones",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Gadgets",
+    "demand_weight": 1
+  },
+  {
+    "category_name": "Gaming",
+    "demand_weight": 8
+  },
+  {
+    "category_name": "Toys",
+    "demand_weight": 9
+  },
+  {
+    "category_name": "Games & Puzzles",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Groceries",
+    "demand_weight": 7
+  },
+  {
+    "category_name": "Beverages",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Snacks & Confectionery",
+    "demand_weight": 9
+  },
+  {
+    "category_name": "Dairy & Breakfast",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Fresh Food",
+    "demand_weight": 10
+  },
+  {
+    "category_name": "Apparel",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Footwear",
+    "demand_weight": 10
+  },
+  {
+    "category_name": "Jewellery",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Watches",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Beauty",
+    "demand_weight": 1
+  },
+  {
+    "category_name": "Skincare",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Haircare",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Personal Care",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Personal Care Appliances",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Health & Wellness",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Baby Products",
+    "demand_weight": 7
+  },
+  {
+    "category_name": "Home",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Furniture",
+    "demand_weight": 8
+  },
+  {
+    "category_name": "Home Decor",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Kitchen",
+    "demand_weight": 3
+  },
+  {
+    "category_name": "Kitchen Appliances",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Large Appliances",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Home Cleaning",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Home Improvement",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Lighting",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Garden & Outdoor",
+    "demand_weight": 10
+  },
+  {
+    "category_name": "Sports",
+    "demand_weight": 3
+  },
+  {
+    "category_name": "Fitness",
+    "demand_weight": 9
+  },
+  {
+    "category_name": "Outdoor & Camping",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Automotive",
+    "demand_weight": 3
+  },
+  {
+    "category_name": "Travel & Luggage",
+    "demand_weight": 8
+  },
+  {
+    "category_name": "Pet Supplies",
+    "demand_weight": 7
+  },
+  {
+    "category_name": "Books",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Office Products",
+    "demand_weight": 9
+  },
+  {
+    "category_name": "School & Stationery",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Musical Instruments",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Arts & Crafts",
+    "demand_weight": 1
+  },
+  {
+    "category_name": "Luggage & Bags",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Security",
+    "demand_weight": 1
+  },
+  {
+    "category_name": "Smart Home",
+    "demand_weight": 6
+  },
+  {
+    "category_name": "Software & Digital Products",
+    "demand_weight": 7
+  },
+  {
+    "category_name": "Movies & Entertainment",
+    "demand_weight": 5
+  },
+  {
+    "category_name": "Collectibles & Hobbies",
+    "demand_weight": 2
+  },
+  {
+    "category_name": "Gifting",
+    "demand_weight": 4
+  },
+  {
+    "category_name": "Religious & Festival Products",
+    "demand_weight": 10
+  },
+  {
+    "category_name": "Consumables",
+    "demand_weight": 6
+  }
+]

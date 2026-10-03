@@ -63,7 +63,7 @@ Retail businesses generate massive amounts of transactional data. Analyzing this
                            ▼
                  Interactive Dashboard
 
-* Note: Historical dataset (retail_logs.csv) is retained for baseline comparison.
+* Note: Data generation is driven by a dynamic, canonical data catalog (data/catalog/) ensuring zero hardcoded analytics.
 ```
 
 ## 6. Dataset
@@ -117,18 +117,36 @@ cd frontend
 npm install
 ```
 
-## 14. Quick Demo Workflow
+## 14. Running the Application
 
-1. Start FastAPI (`python -m uvicorn main:app --port 8000`)
-2. Start React (`npm run dev`)
-3. Open RetailPulse in browser
-4. Click "Start" in the Live Data Control section
-5. Observe live KPIs updating in real-time
-6. Observe charts reacting to new data
-7. Open Products page to see live analytics per product
-8. Open Transactions page to see the raw event stream
-9. Open BDA Pipeline page to review architecture
-10. Explain HDFS/Hive fallback for historical processing
+To run the project locally, you need two separate terminal windows.
+
+**Terminal 1 — Start the Backend (FastAPI)**
+```powershell
+cd backend
+.venv\Scripts\activate
+python -m uvicorn main:app --port 8000
+```
+
+**Terminal 2 — Start the Frontend (React)**
+```powershell
+cd frontend
+npm run dev
+```
+
+Navigate to `http://localhost:5173/` in your browser.
+
+## 15. Quick Demo Workflow
+
+1. Ensure both the Backend and Frontend are running (see section 14).
+2. Open RetailPulse in your browser (`http://localhost:5173/`).
+3. Click **"Start"** in the **Live Data Control** section on the Dashboard.
+4. Observe live KPIs updating in real-time
+5. Observe charts reacting to new data
+6. Open Products page to see live analytics per product
+7. Open Transactions page to see the raw event stream
+8. Open BDA Pipeline page to review architecture
+9. Explain HDFS/Hive fallback for historical processing
 
 > **Note:** RetailPulse currently uses a simulated live retail transaction stream. The historical dataset is retained for MapReduce/Hive/BDA demonstration and regression testing.
 
