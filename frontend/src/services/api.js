@@ -24,6 +24,11 @@ export const fetchHealth = async () => {
   return response.data;
 };
 
+export const getInfrastructureStatus = async () => {
+  const response = await apiClient.get('/api/analytics/infrastructure/status');
+  return response.data;
+};
+
 export const getAnalyticsStatus = async () => {
   const response = await apiClient.get('/api/analytics/status');
   return response.data;

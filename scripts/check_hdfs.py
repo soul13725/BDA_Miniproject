@@ -1,22 +1,14 @@
 import sys
-import subprocess
-import shutil
+import os
+
+# Ensure backend module can be imported
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend')))
+
+from services.infrastructure_service import infrastructure_service
 
 def check_hdfs_availability():
-    """Detects whether HDFS command is available on the system."""
-    hdfs_executable = shutil.which("hdfs")
-    
-    if not hdfs_executable:
-        return False
-        
-    try:
-        # Safe test to check if hdfs is properly configured
-        result = subprocess.run(["hdfs", "dfs", "-help"], capture_output=True, text=True)
-        if result.returncode == 0:
-            return True
-        return False
-    except Exception:
-        return False
+    status = infrastructure_service.check_status()
+    return status["hdfs"] == "ONLINE"
 
 if __name__ == "__main__":
     if check_hdfs_availability():

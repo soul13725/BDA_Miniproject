@@ -10,19 +10,21 @@ root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 if root_dir not in sys.path:
     sys.path.insert(0, root_dir)
 
-try:
-    from hive.hive_config import MODE, LOCAL_ANALYTICS_OUTPUT_DIRECTORY
-    from scripts.check_hive import check_hive_availability
-    from scripts.check_hdfs import check_hdfs_availability
-except ImportError:
-    MODE = "LOCAL_FALLBACK"
-    LOCAL_ANALYTICS_OUTPUT_DIRECTORY = os.path.join(root_dir, "output", "hive")
+from services.infrastructure_service import infrastructure_service
+from services.hive_service import run_hive_query
 
-    def check_hive_availability():
-        return {"command": False, "connection": False}
+# We will determine the mode based on actual infrastructure checks
+def get_analytics_engine():
+    status = infrastructure_service.check_status()
+    # Check if Hive is online AND if a simple query succeeds
+    if status["hive"] == "ONLINE" and status["hdfs"] == "ONLINE":
+        # Check if table works
+        res = run_hive_query("SELECT COUNT(*) FROM retail_logs")
+        if res["success"]:
+            return "HIVE_ANALYTICS"
+    return "LOCAL_FALLBACK"
 
-    def check_hdfs_availability():
-        return False
+LOCAL_ANALYTICS_OUTPUT_DIRECTORY = os.path.join(root_dir, "output", "hive")
 
 # Pydantic Models
 class AnalyticsStatus(BaseModel):
@@ -79,18 +81,29 @@ def check_outputs_exist():
 
 @router.get("/status", response_model=AnalyticsStatus)
 async def get_status():
-    hive_status = check_hive_availability()
-    hdfs_available = check_hdfs_availability()
+    status = infrastructure_service.check_status()
+    engine = get_analytics_engine()
     
     analytics_avail = os.path.exists(os.path.join(LOCAL_ANALYTICS_OUTPUT_DIRECTORY, "total_revenue.txt"))
+    if engine == "HIVE_ANALYTICS":
+        analytics_avail = True
 
     return AnalyticsStatus(
         phase="06",
-        analytics_engine=MODE,
-        hive_available=hive_status["connection"],
-        hdfs_available=hdfs_available,
+        analytics_engine=engine,
+        hive_available=status["hive"] == "ONLINE",
+        hdfs_available=status["hdfs"] == "ONLINE",
         analytics_available=analytics_avail
     )
+
+@router.get("/infrastructure/status")
+async def get_infrastructure_status():
+    status = infrastructure_service.check_status(force_refresh=True)
+    engine = get_analytics_engine()
+    status["analytics_engine"] = engine
+    if engine == "HIVE_ANALYTICS":
+        status["hiveql"] = "ONLINE"
+    return status
 
 @router.get("/summary", response_model=AnalyticsSummary)
 async def get_summary():
@@ -116,12 +129,13 @@ async def get_summary():
                 if len(parts) >= 2:
                     total_qty += int(parts[1])
 
+        engine = get_analytics_engine()
         return AnalyticsSummary(
             total_revenue=total_rev,
             total_transactions=txns,
             total_quantity=total_qty,
             average_transaction_value=avg_txn,
-            analytics_engine=MODE
+            analytics_engine=engine
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading analytics summary: {str(e)}")

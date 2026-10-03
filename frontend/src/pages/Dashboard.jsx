@@ -25,7 +25,8 @@ import {
   getLiveCities,
   getLiveChannels,
   getLiveRevenueTrend,
-  getLiveProducts
+  getLiveProducts,
+  getInfrastructureStatus
 } from '../services/api';
 
 const formatCurrency = (val) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(val || 0);
@@ -44,6 +45,7 @@ export default function Dashboard() {
   const [cities, setCities] = useState([]);
   const [channels, setChannels] = useState([]);
   const [topProducts, setTopProducts] = useState([]);
+  const [infraStatus, setInfraStatus] = useState(null);
   const [dataSource, setDataSource] = useState('LIVE'); // 'LIVE' or 'HISTORICAL'
   
   // Live chart data
@@ -59,7 +61,9 @@ export default function Dashboard() {
     setLoading(true);
     try {
       const statusRes = await getAnalyticsStatus();
+      const infRes = await getInfrastructureStatus();
       setStatus(statusRes);
+      setInfraStatus(infRes);
       if (!statusRes.analytics_available) return;
 
       const [sumRes, dailyRes, monthRes, catRes, payRes, cityRes, chanRes, topRes] = await Promise.all([
@@ -120,22 +124,14 @@ export default function Dashboard() {
             )}
           </h1>
           <div style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Real-Time Retail Big Data Analytics Platform</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginTop: '1rem', background: 'var(--bg-surface)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '1rem', background: 'var(--bg-surface)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border)' }}>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Data Source</div>
               <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{isLive ? 'LIVE SIMULATED RETAIL DATA' : 'HISTORICAL REFERENCE DATA'}</div>
             </div>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Analytics Engine</div>
-              <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{isLive ? 'LIVE ANALYTICS' : (status?.analytics_engine === 'LOCAL_FALLBACK' ? 'Local Fallback' : status?.analytics_engine)}</div>
-            </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>HDFS</div>
-              <div style={{ fontWeight: 500, color: status?.hdfs_available ? 'var(--success)' : 'var(--error)' }}>{status?.hdfs_available ? 'ONLINE' : 'OFFLINE'}</div>
-            </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600 }}>Hive</div>
-              <div style={{ fontWeight: 500, color: status?.hive_available ? 'var(--success)' : 'var(--error)' }}>{status?.hive_available ? 'ONLINE' : 'OFFLINE'}</div>
+              <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{isLive ? 'LIVE ANALYTICS' : (infraStatus?.analytics_engine === 'LOCAL_FALLBACK' ? 'LOCAL ANALYTICS' : infraStatus?.analytics_engine)}</div>
             </div>
           </div>
         </div>
@@ -156,18 +152,14 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* Infrastructure Status */}
       <section className="card" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ width: '100%', fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 600, borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem', marginBottom: '0.5rem' }}>Infrastructure Status</div>
         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', fontSize: '0.9rem' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Python</span><span style={{ color: 'var(--success)', fontWeight: 'bold' }}>ONLINE</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>FastAPI</span><span style={{ color: status ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{status ? 'ONLINE' : 'OFFLINE'}</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>React</span><span style={{ color: 'var(--success)', fontWeight: 'bold' }}>ONLINE</span></div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Python</span><span style={{ color: infraStatus?.python === 'ONLINE' ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{infraStatus?.python || 'OFFLINE'}</span></div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>FastAPI</span><span style={{ color: infraStatus?.fastapi === 'ONLINE' ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{infraStatus?.fastapi || 'OFFLINE'}</span></div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>React</span><span style={{ color: infraStatus?.react === 'ONLINE' ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{infraStatus?.react || 'OFFLINE'}</span></div>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Live Analytics</span><span style={{ color: liveSummary ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{liveSummary ? 'ONLINE' : 'OFFLINE'}</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Historical Dataset</span><span style={{ color: status?.dataset_exists !== false ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{status?.dataset_exists !== false ? 'ONLINE' : 'OFFLINE'}</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Hadoop</span><span style={{ color: status?.hdfs_available ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{status?.hdfs_available ? 'ONLINE' : 'OFFLINE'}</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>HDFS</span><span style={{ color: status?.hdfs_available ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{status?.hdfs_available ? 'ONLINE' : 'OFFLINE'}</span></div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Hive</span><span style={{ color: status?.hive_available ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{status?.hive_available ? 'ONLINE' : 'OFFLINE'}</span></div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}><span>Historical Dataset</span><span style={{ color: infraStatus?.historical_dataset === 'ONLINE' ? 'var(--success)' : 'var(--error)', fontWeight: 'bold' }}>{infraStatus?.historical_dataset || 'OFFLINE'}</span></div>
         </div>
       </section>
 

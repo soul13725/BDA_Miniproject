@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
-import { fetchHealth } from './services/api.js';
 
 import Dashboard from './pages/Dashboard.jsx';
 import Products from './pages/Products.jsx';
 import Transactions from './pages/Transactions.jsx';
-import BDAPipeline from './pages/BDAPipeline.jsx';
 
 
 /* ============================================================
@@ -17,16 +14,12 @@ const NAV_ITEMS = [
   { path: '/',             label: 'Dashboard',    icon: '⬡' },
   { path: '/products',     label: 'Products',     icon: '🛒' },
   { path: '/transactions', label: 'Transactions', icon: '💳' },
-  { path: '/pipeline',     label: 'BDA Pipeline', icon: '⚙' },
 ];
 
 // ── Tech stack badges ────────────────────────────────────────
 const TECH_STACK = [
   { label: 'React + Vite',  variant: 'primary',   status: 'active',  note: 'Frontend'          },
   { label: 'FastAPI',       variant: 'primary',   status: 'active',  note: 'Backend API'        },
-  { label: 'Hadoop',        variant: 'secondary', status: 'planned', note: 'Phase 03 — Future'  },
-  { label: 'MapReduce',     variant: 'secondary', status: 'planned', note: 'Phase 03 — Future'  },
-  { label: 'Hive',          variant: 'secondary', status: 'planned', note: 'Phase 05 — Future'  },
 ];
 
 /* ── Sidebar ── */
@@ -98,7 +91,6 @@ export default function App() {
           <Route path="/"             element={<Dashboard />} />
           <Route path="/products"     element={<Products />} />
           <Route path="/transactions" element={<Transactions />} />
-          <Route path="/pipeline"     element={<BDAPipeline />} />
         </Routes>
       </main>
     </div>

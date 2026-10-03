@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { getAnalyticsStatus, getLiveStatus } from '../services/api';
+import { getAnalyticsStatus, getLiveStatus, getInfrastructureStatus } from '../services/api';
 
 export default function BDAPipeline() {
   const [analyticsStatus, setAnalyticsStatus] = useState(null);
   const [liveStatus, setLiveStatus] = useState(null);
+  const [infraStatus, setInfraStatus] = useState(null);
 
   useEffect(() => {
     getAnalyticsStatus().then(setAnalyticsStatus).catch(console.error);
     getLiveStatus().then(setLiveStatus).catch(console.error);
+    getInfrastructureStatus().then(setInfraStatus).catch(console.error);
   }, []);
 
   const liveComponents = [
@@ -15,19 +17,19 @@ export default function BDAPipeline() {
     { name: "LIVE GENERATOR\nretail_live_transactions", status: liveStatus?.is_running ? 'ONLINE' : 'OFFLINE', active: !!liveStatus?.is_running },
     { name: "LIVE CSV\ndata/live/retail_live_transactions.csv", status: "ONLINE", active: true },
     { name: "LIVE ANALYTICS\nIn-Memory Aggregation", status: "ONLINE", active: true },
-    { name: "FASTAPI\nBackend Analytics API", status: analyticsStatus ? 'ONLINE' : 'OFFLINE', active: !!analyticsStatus },
-    { name: "REACT DASHBOARD\nRetailPulse UI", status: "ONLINE", active: true }
+    { name: "FASTAPI\nBackend Analytics API", status: infraStatus?.fastapi === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.fastapi === 'ONLINE' },
+    { name: "REACT DASHBOARD\nRetailPulse UI", status: infraStatus?.react === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.react === 'ONLINE' }
   ];
 
   const histComponents = [
-    { name: "HISTORICAL CSV\ndata/retail_logs.csv", status: "ONLINE", active: true },
-    { name: "HDFS\n/retail_bda/raw", status: analyticsStatus?.hdfs_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hdfs_available },
-    { name: "MapReduce\nPython Mapper/Reducer", status: analyticsStatus?.hdfs_available ? 'REAL HADOOP' : 'LOCAL SIMULATION', active: true },
-    { name: "MapReduce Output\noutput/mapreduce", status: "ONLINE", active: true },
-    { name: "Hive\nApache Hive Data Warehouse", status: analyticsStatus?.hive_available ? 'ONLINE' : 'OFFLINE', active: analyticsStatus?.hive_available },
-    { name: "HiveQL / Analytics\noutput/hive", status: !analyticsStatus?.hive_available ? 'LOCAL FALLBACK' : 'ONLINE', active: true },
-    { name: "FASTAPI\nBackend Analytics API", status: analyticsStatus ? 'ONLINE' : 'OFFLINE', active: !!analyticsStatus },
-    { name: "REACT DASHBOARD\nRetailPulse UI", status: "ONLINE", active: true }
+    { name: "HISTORICAL CSV\ndata/retail_logs.csv", status: infraStatus?.historical_dataset === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.historical_dataset === 'ONLINE' },
+    { name: "HDFS\n/retail_bda/raw", status: infraStatus?.hdfs === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.hdfs === 'ONLINE' },
+    { name: "MapReduce\nPython Mapper/Reducer", status: infraStatus?.mapreduce === 'ONLINE' ? 'REAL HADOOP' : 'LOCAL SIMULATION', active: true },
+    { name: "MapReduce Output\noutput/mapreduce", status: infraStatus?.mapreduce_output === 'ONLINE' ? 'ONLINE' : (infraStatus?.mapreduce_output || "LOCAL OUTPUT"), active: true },
+    { name: "Hive\nApache Hive Data Warehouse", status: infraStatus?.hive === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.hive === 'ONLINE' },
+    { name: "HiveQL / Analytics\noutput/hive", status: infraStatus?.hiveql === 'ONLINE' ? 'ONLINE' : 'LOCAL FALLBACK', active: true },
+    { name: "FASTAPI\nBackend Analytics API", status: infraStatus?.fastapi === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.fastapi === 'ONLINE' },
+    { name: "REACT DASHBOARD\nRetailPulse UI", status: infraStatus?.react === 'ONLINE' ? 'ONLINE' : 'OFFLINE', active: infraStatus?.react === 'ONLINE' }
   ];
 
   const PipelineFlow = ({ components, fallbackMessage }) => (

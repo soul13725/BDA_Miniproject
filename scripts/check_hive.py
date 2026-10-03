@@ -1,33 +1,21 @@
 import sys
-import shutil
-import subprocess
 import os
 
-# Ensure hadoop module can be imported
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure backend module can be imported
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'backend')))
 
-try:
-    from scripts.check_hdfs import check_hdfs_availability
-except ImportError:
-    def check_hdfs_availability():
-        return False
+from services.infrastructure_service import infrastructure_service
 
 def check_hive_availability():
-    """Detects whether Hive command is available on the system."""
-    hive_executable = shutil.which("hive")
-    
-    if not hive_executable:
-        return {"command": False, "executable": "NOT FOUND", "connection": False, "version": None}
-        
-    try:
-        # Safe test to check if hive is properly configured
-        result = subprocess.run(["hive", "--version"], capture_output=True, text=True)
-        if result.returncode == 0:
-            version = result.stdout.strip().split('\n')[0]
-            return {"command": True, "executable": hive_executable, "connection": True, "version": version}
-        return {"command": True, "executable": hive_executable, "connection": False, "version": None}
-    except Exception:
-        return {"command": True, "executable": hive_executable, "connection": False, "version": None}
+    status = infrastructure_service.check_status()
+    return {
+        "command": status["hive"] == "ONLINE",
+        "connection": status["hive"] == "ONLINE"
+    }
+
+def check_hdfs_availability():
+    status = infrastructure_service.check_status()
+    return status["hdfs"] == "ONLINE"
 
 if __name__ == "__main__":
     print("Hive Availability")
@@ -45,10 +33,7 @@ if __name__ == "__main__":
         sys.exit(1)
     else:
         print("Hive command available: YES")
-        print(f"Hive executable: {hive_status['executable']}")
-        if hive_status["version"]:
-            print(f"Hive version: {hive_status['version']}")
-        print(f"Hive connection: {'AVAILABLE' if hive_status['connection'] else 'UNAVAILABLE'}")
+        print("Hive connection: AVAILABLE")
         print(f"HDFS available: {'YES' if hdfs_available else 'NO'}")
         
         if hive_status['connection'] and hdfs_available:
