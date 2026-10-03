@@ -1,0 +1,44 @@
+# ── Python ───────────────────────────────────────
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Environment / Secrets ─────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Node / Frontend ───────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Output / Generated Data ───────────────────────
+# output/ (Keep output directory for academic submission)
+
+# ── IDE / Editor ──────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── OS ────────────────────────────────────────────
+Desktop.ini
